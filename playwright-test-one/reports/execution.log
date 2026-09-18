@@ -1,0 +1,146 @@
+[2026-09-18T17:44:39.448Z] [RUN     ] RUN START app=http://localhost:5173/
+[2026-09-18T17:44:40.069Z] [TEST    ] [TC-001] START TC-001 - authentication accepts valid and rejects invalid credentials
+[2026-09-18T17:44:43.583Z] [VALIDATE] [TC-001] Login page contains Welcome back
+[2026-09-18T17:44:43.640Z] [PASS    ] [TC-001] Login page
+[2026-09-18T17:44:43.641Z] [ACTION  ] [TC-001] Fill email
+[2026-09-18T17:44:43.701Z] [ACTION  ] [TC-001] Fill password
+[2026-09-18T17:44:43.720Z] [ACTION  ] [TC-001] Click Sign in
+[2026-09-18T17:44:43.773Z] [VALIDATE] [TC-001] Invalid login error contains That email and password combination is not recognized.
+[2026-09-18T17:44:43.826Z] [PASS    ] [TC-001] Invalid login error
+[2026-09-18T17:44:43.827Z] [ACTION  ] [TC-001] Fill email
+[2026-09-18T17:44:43.845Z] [ACTION  ] [TC-001] Fill password
+[2026-09-18T17:44:43.870Z] [ACTION  ] [TC-001] Click Sign in
+[2026-09-18T17:44:43.916Z] [VALIDATE] [TC-001] Welcome greeting contains Maya
+[2026-09-18T17:44:44.004Z] [PASS    ] [TC-001] Welcome greeting
+[2026-09-18T17:44:44.005Z] [ACTION  ] [TC-001] Click Sign out
+[2026-09-18T17:44:44.363Z] [INFO    ] [TC-001] Recorded 8 coverage hits
+[2026-09-18T17:44:44.364Z] [PASS    ] [TC-001] END TC-001 - authentication accepts valid and rejects invalid credentials -> passed
+[2026-09-18T17:44:44.384Z] [TEST    ] [TC-002] START TC-002 - dashboard exposes every banking service and quick link
+[2026-09-18T17:44:44.938Z] [ACTION  ] [TC-002] Fill email
+[2026-09-18T17:44:44.977Z] [ACTION  ] [TC-002] Fill password
+[2026-09-18T17:44:44.993Z] [ACTION  ] [TC-002] Click Sign in
+[2026-09-18T17:44:45.040Z] [VALIDATE] [TC-002] Welcome greeting contains Maya
+[2026-09-18T17:44:45.106Z] [PASS    ] [TC-002] Welcome greeting
+[2026-09-18T17:44:45.107Z] [VALIDATE] [TC-002] Dashboard services heading contains What would you like to explore?
+[2026-09-18T17:44:45.131Z] [PASS    ] [TC-002] Dashboard services heading
+[2026-09-18T17:44:45.147Z] [PASS    ] [TC-002] Dashboard service cards
+[2026-09-18T17:44:45.156Z] [PASS    ] [TC-002] Loans service card
+[2026-09-18T17:44:45.164Z] [PASS    ] [TC-002] Statements service card
+[2026-09-18T17:44:45.181Z] [PASS    ] [TC-002] Cards service card
+[2026-09-18T17:44:45.189Z] [PASS    ] [TC-002] Customers service card
+[2026-09-18T17:44:45.362Z] [INFO    ] [TC-002] Recorded 13 coverage hits
+[2026-09-18T17:44:45.363Z] [PASS    ] [TC-002] END TC-002 - dashboard exposes every banking service and quick link -> passed
+[2026-09-18T17:44:45.380Z] [TEST    ] [TC-003] START TC-003 - user details validates profile and all account fields
+[2026-09-18T17:44:45.960Z] [ACTION  ] [TC-003] Fill email
+[2026-09-18T17:44:46.013Z] [ACTION  ] [TC-003] Fill password
+[2026-09-18T17:44:46.033Z] [ACTION  ] [TC-003] Click Sign in
+[2026-09-18T17:44:46.100Z] [ACTION  ] [TC-003] Click User details
+[2026-09-18T17:44:46.220Z] [VALIDATE] [TC-003] User details breadcrumb contains User details
+[2026-09-18T17:44:46.230Z] [PASS    ] [TC-003] User details breadcrumb
+[2026-09-18T17:44:46.240Z] [PASS    ] [TC-003] Profile card
+[2026-09-18T17:44:46.240Z] [VALIDATE] [TC-003] Profile name contains Maya Chen
+[2026-09-18T17:44:46.249Z] [PASS    ] [TC-003] Profile name
+[2026-09-18T17:44:46.249Z] [VALIDATE] [TC-003] Profile role contains Primary account holder
+[2026-09-18T17:44:46.257Z] [PASS    ] [TC-003] Profile role
+[2026-09-18T17:44:46.258Z] [VALIDATE] [TC-003] Profile status contains Active
+[2026-09-18T17:44:46.265Z] [PASS    ] [TC-003] Profile status
+[2026-09-18T17:44:46.272Z] [PASS    ] [TC-003] Profile details
+[2026-09-18T17:44:46.421Z] [INFO    ] [TC-003] Recorded 12 coverage hits
+[2026-09-18T17:44:46.421Z] [PASS    ] [TC-003] END TC-003 - user details validates profile and all account fields -> passed
+[2026-09-18T17:44:46.440Z] [TEST    ] [TC-004] START TC-004 - loans validates applications, repayments, and apply action
+[2026-09-18T17:44:46.966Z] [ACTION  ] [TC-004] Fill email
+[2026-09-18T17:44:47.009Z] [ACTION  ] [TC-004] Fill password
+[2026-09-18T17:44:47.025Z] [ACTION  ] [TC-004] Click Sign in
+[2026-09-18T17:44:47.068Z] [ACTION  ] [TC-004] Click Loans
+[2026-09-18T17:44:47.253Z] [VALIDATE] [TC-004] Loans breadcrumb contains Loans
+[2026-09-18T17:44:47.272Z] [PASS    ] [TC-004] Loans breadcrumb
+[2026-09-18T17:44:47.273Z] [VALIDATE] [TC-004] LOANS title contains Loans
+[2026-09-18T17:44:47.284Z] [PASS    ] [TC-004] LOANS title
+[2026-09-18T17:44:47.284Z] [VALIDATE] [TC-004] LOANS subtitle contains Manage your loans and repayment plans
+[2026-09-18T17:44:47.292Z] [PASS    ] [TC-004] LOANS subtitle
+[2026-09-18T17:44:47.304Z] [PASS    ] [TC-004] LOANS rows
+[2026-09-18T17:44:47.315Z] [PASS    ] [TC-004] LOANS row
+[2026-09-18T17:44:47.352Z] [PASS    ] [TC-004] LOANS row
+[2026-09-18T17:44:47.353Z] [VALIDATE] [TC-004] LOANS action contains Apply for a loan
+[2026-09-18T17:44:47.404Z] [PASS    ] [TC-004] LOANS action
+[2026-09-18T17:44:47.452Z] [ACTION  ] [TC-004] Click Apply for a loan
+[2026-09-18T17:44:47.677Z] [INFO    ] [TC-004] Recorded 8 coverage hits
+[2026-09-18T17:44:47.678Z] [PASS    ] [TC-004] END TC-004 - loans validates applications, repayments, and apply action -> passed
+[2026-09-18T17:44:47.698Z] [TEST    ] [TC-005] START TC-005 - credit cards validates both cards and management action
+[2026-09-18T17:44:48.327Z] [ACTION  ] [TC-005] Fill email
+[2026-09-18T17:44:48.395Z] [ACTION  ] [TC-005] Fill password
+[2026-09-18T17:44:48.443Z] [ACTION  ] [TC-005] Click Sign in
+[2026-09-18T17:44:48.501Z] [ACTION  ] [TC-005] Click Credit cards
+[2026-09-18T17:44:48.632Z] [VALIDATE] [TC-005] Credit cards breadcrumb contains Credit cards
+[2026-09-18T17:44:48.646Z] [PASS    ] [TC-005] Credit cards breadcrumb
+[2026-09-18T17:44:48.647Z] [VALIDATE] [TC-005] CARDS title contains Credit Cards
+[2026-09-18T17:44:48.658Z] [PASS    ] [TC-005] CARDS title
+[2026-09-18T17:44:48.659Z] [VALIDATE] [TC-005] CARDS subtitle contains View cards, balances, and payment activity
+[2026-09-18T17:44:48.667Z] [PASS    ] [TC-005] CARDS subtitle
+[2026-09-18T17:44:48.674Z] [PASS    ] [TC-005] CARDS rows
+[2026-09-18T17:44:48.681Z] [PASS    ] [TC-005] CARDS row
+[2026-09-18T17:44:48.689Z] [PASS    ] [TC-005] CARDS row
+[2026-09-18T17:45:04.730Z] [INFO    ] [TC-005] Recorded 3 coverage hits
+[2026-09-18T17:45:04.731Z] [FAIL    ] [TC-005] END TC-005 - credit cards validates both cards and management action -> failed
+[2026-09-18T17:45:05.488Z] [TEST    ] [TC-005] START TC-005 - credit cards validates both cards and management action
+[2026-09-18T17:45:06.278Z] [ACTION  ] [TC-005] Fill email
+[2026-09-18T17:45:06.331Z] [ACTION  ] [TC-005] Fill password
+[2026-09-18T17:45:06.349Z] [ACTION  ] [TC-005] Click Sign in
+[2026-09-18T17:45:06.404Z] [ACTION  ] [TC-005] Click Credit cards
+[2026-09-18T17:45:06.527Z] [VALIDATE] [TC-005] Credit cards breadcrumb contains Credit cards
+[2026-09-18T17:45:06.544Z] [PASS    ] [TC-005] Credit cards breadcrumb
+[2026-09-18T17:45:06.545Z] [VALIDATE] [TC-005] CARDS title contains Credit Cards
+[2026-09-18T17:45:06.555Z] [PASS    ] [TC-005] CARDS title
+[2026-09-18T17:45:06.556Z] [VALIDATE] [TC-005] CARDS subtitle contains View cards, balances, and payment activity
+[2026-09-18T17:45:06.566Z] [PASS    ] [TC-005] CARDS subtitle
+[2026-09-18T17:45:06.577Z] [PASS    ] [TC-005] CARDS rows
+[2026-09-18T17:45:06.586Z] [PASS    ] [TC-005] CARDS row
+[2026-09-18T17:45:06.595Z] [PASS    ] [TC-005] CARDS row
+[2026-09-18T17:45:22.675Z] [INFO    ] [TC-005] Recorded 3 coverage hits
+[2026-09-18T17:45:22.676Z] [FAIL    ] [TC-005] END TC-005 - credit cards validates both cards and management action -> failed
+[2026-09-18T17:45:23.414Z] [TEST    ] [TC-006] START TC-006 - statements validates monthly documents and download action
+[2026-09-18T17:45:24.211Z] [ACTION  ] [TC-006] Fill email
+[2026-09-18T17:45:24.265Z] [ACTION  ] [TC-006] Fill password
+[2026-09-18T17:45:24.282Z] [ACTION  ] [TC-006] Click Sign in
+[2026-09-18T17:45:24.337Z] [ACTION  ] [TC-006] Click Statements
+[2026-09-18T17:45:24.463Z] [VALIDATE] [TC-006] Statements breadcrumb contains Statements
+[2026-09-18T17:45:24.483Z] [PASS    ] [TC-006] Statements breadcrumb
+[2026-09-18T17:45:24.484Z] [VALIDATE] [TC-006] STATEMENTS title contains Statements
+[2026-09-18T17:45:24.496Z] [PASS    ] [TC-006] STATEMENTS title
+[2026-09-18T17:45:24.497Z] [VALIDATE] [TC-006] STATEMENTS subtitle contains Review account statements and transactions
+[2026-09-18T17:45:24.508Z] [PASS    ] [TC-006] STATEMENTS subtitle
+[2026-09-18T17:45:24.519Z] [PASS    ] [TC-006] STATEMENTS rows
+[2026-09-18T17:45:24.527Z] [PASS    ] [TC-006] STATEMENTS row
+[2026-09-18T17:45:24.536Z] [PASS    ] [TC-006] STATEMENTS row
+[2026-09-18T17:45:24.545Z] [PASS    ] [TC-006] STATEMENTS row
+[2026-09-18T17:45:24.546Z] [VALIDATE] [TC-006] STATEMENTS action contains Download statements
+[2026-09-18T17:45:24.554Z] [PASS    ] [TC-006] STATEMENTS action
+[2026-09-18T17:45:24.555Z] [ACTION  ] [TC-006] Click Download statements
+[2026-09-18T17:45:24.766Z] [INFO    ] [TC-006] Recorded 9 coverage hits
+[2026-09-18T17:45:24.767Z] [PASS    ] [TC-006] END TC-006 - statements validates monthly documents and download action -> passed
+[2026-09-18T17:45:24.786Z] [TEST    ] [TC-007] START TC-007 - activity history validates transactions and download action
+[2026-09-18T17:45:25.325Z] [ACTION  ] [TC-007] Fill email
+[2026-09-18T17:45:25.365Z] [ACTION  ] [TC-007] Fill password
+[2026-09-18T17:45:25.391Z] [ACTION  ] [TC-007] Click Sign in
+[2026-09-18T17:45:25.430Z] [ACTION  ] [TC-007] Click Activity history
+[2026-09-18T17:45:25.551Z] [VALIDATE] [TC-007] Activity history breadcrumb contains Activity history
+[2026-09-18T17:45:25.561Z] [PASS    ] [TC-007] Activity history breadcrumb
+[2026-09-18T17:45:25.562Z] [VALIDATE] [TC-007] ACTIVITY title contains Activity History
+[2026-09-18T17:45:25.572Z] [PASS    ] [TC-007] ACTIVITY title
+[2026-09-18T17:45:25.573Z] [VALIDATE] [TC-007] ACTIVITY subtitle contains Review recent transactions and account activity
+[2026-09-18T17:45:25.582Z] [PASS    ] [TC-007] ACTIVITY subtitle
+[2026-09-18T17:45:25.597Z] [PASS    ] [TC-007] ACTIVITY rows: 2
+[2026-09-18T17:45:25.598Z] [VALIDATE] [TC-007] ACTIVITY action contains Download activity
+[2026-09-18T17:45:25.605Z] [PASS    ] [TC-007] ACTIVITY action
+[2026-09-18T17:45:25.606Z] [ACTION  ] [TC-007] Click Download activity
+[2026-09-18T17:45:25.786Z] [INFO    ] [TC-007] Recorded 9 coverage hits
+[2026-09-18T17:45:25.787Z] [PASS    ] [TC-007] END TC-007 - activity history validates transactions and download action -> passed
+[2026-09-18T17:45:25.816Z] [TEST    ] [TC-008] START TC-008 - preferences validates every setting and edit action
+[2026-09-18T17:45:26.090Z] [INFO    ] [TC-008] Recorded 0 coverage hits
+[2026-09-18T17:45:26.090Z] [SKIP    ] [TC-008] END TC-008 - preferences validates every setting and edit action -> skipped
+[2026-09-18T17:45:26.214Z] [RUN     ] RUN END
+[2026-09-18T17:45:26.390Z] [RESULT  ] FINAL EXECUTION SUMMARY
+[2026-09-18T17:45:26.390Z] [RESULT  ] Tests: 8  Passed: 6  Failed: 1  Skipped: 1  Flaky: 0  Pass %: 75%
+[2026-09-18T17:45:26.391Z] [RESULT  ] Coverage: 83%  Test gap: 17%  (62/75 inventory nodes)
+[2026-09-18T17:45:26.392Z] [RESULT  ] Untouched -> modules: 1, sub-modules: 3, functionality: 9
+[2026-09-18T17:45:26.392Z] [RESULT  ] Report: C:\Users\GCCHackVM.ILB-3790VM-63\Documents\playwright-test-one\reports\final-execution-report.html

@@ -23,8 +23,8 @@ export const REPORT_CSS = `
 .panel{padding:24px 26px}.panel h2{margin:0 0 4px;font-size:17px}.hint{color:var(--muted);font-size:13px;margin:0 0 18px}
 .donuts{display:flex;gap:34px;flex-wrap:wrap;align-items:center;justify-content:space-around}
 .donut{--v:0;--c:var(--green);width:150px;height:150px;border-radius:50%;display:grid;place-items:center;background:conic-gradient(var(--c) calc(var(--v)*1%),var(--line) 0)}
-.donut i{width:110px;height:110px;background:var(--card);border-radius:50%;display:grid;place-items:center;text-align:center}
-.donut b{font-size:28px;font-weight:800;display:block}.donut span{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+.donut i{width:110px;height:110px;background:var(--card);border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+.donut b{font-size:28px;font-weight:800;display:block;line-height:1.1}.donut span{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;line-height:1.2}
 .legend{display:flex;flex-direction:column;gap:10px;min-width:170px}.legend .row{display:flex;align-items:center;gap:10px;font-size:14px}
 .legend i{width:12px;height:12px;border-radius:3px}.legend b{margin-left:auto}
 table{width:100%;border-collapse:collapse;font-size:14px}

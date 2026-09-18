@@ -34,3 +34,6 @@ CoverageEngine/03-coverage-api/data/checkpoint-*.json
 .DS_Store
 Thumbs.db
 desktop.ini
+
+# Backup of the former HackathonDemo inner repo
+HackathonDemo/.git.bak/

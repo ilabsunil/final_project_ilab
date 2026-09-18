@@ -24,8 +24,8 @@
 .panel{padding:24px 26px}.panel h2{margin:0 0 4px;font-size:17px}.hint{color:var(--muted);font-size:13px;margin:0 0 18px}
 .donuts{display:flex;gap:34px;flex-wrap:wrap;align-items:center;justify-content:space-around}
 .donut{--v:0;--c:var(--green);width:150px;height:150px;border-radius:50%;display:grid;place-items:center;background:conic-gradient(var(--c) calc(var(--v)*1%),var(--line) 0)}
-.donut i{width:110px;height:110px;background:var(--card);border-radius:50%;display:grid;place-items:center;text-align:center}
-.donut b{font-size:28px;font-weight:800;display:block}.donut span{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+.donut i{width:110px;height:110px;background:var(--card);border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+.donut b{font-size:28px;font-weight:800;display:block;line-height:1.1}.donut span{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;line-height:1.2}
 .legend{display:flex;flex-direction:column;gap:10px;min-width:170px}.legend .row{display:flex;align-items:center;gap:10px;font-size:14px}
 .legend i{width:12px;height:12px;border-radius:3px}.legend b{margin-left:auto}
 table{width:100%;border-collapse:collapse;font-size:14px}
@@ -56,8 +56,8 @@ tbody td{padding:12px 14px;border-bottom:1px solid var(--line);vertical-align:mi
 <h1>PNC Bank Digital Banking Application</h1>
 <p>Execution results for every test case, combined with CoverageEngine module inventory analysis showing which modules, sub-modules and functionality remain untouched by automation.</p>
 <div class="meta">
-<div><span>Started</span>9/18/2026, 3:59:59 PM</div><div><span>Finished</span>9/18/2026, 4:00:10 PM</div>
-<div><span>Total duration</span>11.3s</div><div><span>Browser</span>chromium · video on</div>
+<div><span>Started</span>9/18/2026, 5:17:19 PM</div><div><span>Finished</span>9/18/2026, 5:17:33 PM</div>
+<div><span>Total duration</span>14.1s</div><div><span>Browser</span>chromium · video on</div>
 </div></header>
 <section class="grid k6">
 <div class="card kpi i"><div class="l">Total tests</div><div class="v">4</div><div class="s">test cases executed</div></div>
@@ -87,10 +87,10 @@ tbody td{padding:12px 14px;border-bottom:1px solid var(--line);vertical-align:mi
 <div class="card panel" style="padding:6px 6px 4px"><table>
 <thead><tr><th>Test case</th><th>Status</th><th>Duration</th><th>Retries</th><th>Details</th></tr></thead>
 <tbody><tr><td class="tc">TC-001<small>login with valid credentials and print welcome text</small></td>
-<td><span class="pill pass">● Passed</span></td><td>3.6s</td><td>0</td><td><span style="color:var(--muted)">—</span></td></tr><tr><td class="tc">TC-002<small>loans module lists existing loans</small></td>
-<td><span class="pill pass">● Passed</span></td><td>2.9s</td><td>0</td><td><span style="color:var(--muted)">—</span></td></tr><tr><td class="tc">TC-003<small>user details shows customer profile</small></td>
-<td><span class="pill pass">● Passed</span></td><td>2.9s</td><td>0</td><td><span style="color:var(--muted)">—</span></td></tr><tr><td class="tc">TC-004<small>credit cards module lists customer cards</small></td>
-<td><span class="pill skip">● Skipped</span></td><td>499ms</td><td>0</td><td><span style="color:var(--amber)">Credit Cards automation not implemented yet — pending test data sign-off</span></td></tr></tbody></table></div>
+<td><span class="pill pass">● Passed</span></td><td>3.8s</td><td>0</td><td><span style="color:var(--muted)">—</span></td></tr><tr><td class="tc">TC-002<small>loans module lists existing loans</small></td>
+<td><span class="pill pass">● Passed</span></td><td>3.6s</td><td>0</td><td><span style="color:var(--muted)">—</span></td></tr><tr><td class="tc">TC-003<small>user details shows customer profile</small></td>
+<td><span class="pill pass">● Passed</span></td><td>3.2s</td><td>0</td><td><span style="color:var(--muted)">—</span></td></tr><tr><td class="tc">TC-004<small>credit cards module lists customer cards</small></td>
+<td><span class="pill skip">● Skipped</span></td><td>661ms</td><td>0</td><td><span style="color:var(--amber)">Credit Cards automation not implemented yet — pending test data sign-off</span></td></tr></tbody></table></div>
 <h2 class="sec">Test gap — untouched by any test case <span class="rule"></span></h2>
 <div class="card panel">
 <p class="hint">Everything below exists in the CoverageEngine inventory but was <b>not exercised by any test case</b> in this run. These are the candidates for new automation.</p>
@@ -105,5 +105,5 @@ tbody td{padding:12px 14px;border-bottom:1px solid var(--line);vertical-align:mi
 Pass % = passed ÷ total test cases. Coverage % = (modules + sub-modules + functionality touched by <em>any</em> test) ÷ all
 75 inventory nodes from CoverageEngine (8 modules, 20 sub-modules,
 47 functionality). Test-gap % = 100 − coverage %. Anything with no test case is listed as <b>untouched</b>.</div>
-<p class="foot">PNC Bank Quality Platform · Playwright POM + CoverageEngine · generated 9/18/2026, 4:00:10 PM</p>
+<p class="foot">PNC Bank Quality Platform · Playwright POM + CoverageEngine · generated 9/18/2026, 5:17:33 PM</p>
 </div></body></html>

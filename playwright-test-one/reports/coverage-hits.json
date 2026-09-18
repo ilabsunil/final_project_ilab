@@ -1,0 +1,522 @@
+[
+  {
+    "testCaseId": "TC-001",
+    "moduleId": "route-auth",
+    "subModuleId": null,
+    "functionalityId": null,
+    "label": "Authentication",
+    "timestamp": "2026-09-18T17:44:43.641Z"
+  },
+  {
+    "testCaseId": "TC-001",
+    "moduleId": "route-auth",
+    "subModuleId": "component-login-form",
+    "functionalityId": null,
+    "label": "Login form",
+    "timestamp": "2026-09-18T17:44:43.641Z"
+  },
+  {
+    "testCaseId": "TC-001",
+    "moduleId": "route-auth",
+    "subModuleId": "component-login-form",
+    "functionalityId": "action-auth-invalid-login",
+    "label": "Rejected invalid credentials",
+    "timestamp": "2026-09-18T17:44:43.827Z"
+  },
+  {
+    "testCaseId": "TC-001",
+    "moduleId": "route-auth",
+    "subModuleId": "component-login-form",
+    "functionalityId": "action-auth-enter-email",
+    "label": "Entered email",
+    "timestamp": "2026-09-18T17:44:44.005Z"
+  },
+  {
+    "testCaseId": "TC-001",
+    "moduleId": "route-auth",
+    "subModuleId": "component-login-form",
+    "functionalityId": "action-auth-enter-password",
+    "label": "Entered password",
+    "timestamp": "2026-09-18T17:44:44.005Z"
+  },
+  {
+    "testCaseId": "TC-001",
+    "moduleId": "route-auth",
+    "subModuleId": "component-login-form",
+    "functionalityId": "action-auth-signin",
+    "label": "Signed in",
+    "timestamp": "2026-09-18T17:44:44.005Z"
+  },
+  {
+    "testCaseId": "TC-001",
+    "moduleId": "route-auth",
+    "subModuleId": "component-session",
+    "functionalityId": null,
+    "label": "Session controls",
+    "timestamp": "2026-09-18T17:44:44.074Z"
+  },
+  {
+    "testCaseId": "TC-001",
+    "moduleId": "route-auth",
+    "subModuleId": "component-session",
+    "functionalityId": "action-auth-signout",
+    "label": "Signed out",
+    "timestamp": "2026-09-18T17:44:44.074Z"
+  },
+  {
+    "testCaseId": "TC-002",
+    "moduleId": "route-dashboard",
+    "subModuleId": null,
+    "functionalityId": null,
+    "label": "Dashboard",
+    "timestamp": "2026-09-18T17:44:45.107Z"
+  },
+  {
+    "testCaseId": "TC-002",
+    "moduleId": "route-dashboard",
+    "subModuleId": "component-dash-greeting",
+    "functionalityId": null,
+    "label": "Welcome greeting",
+    "timestamp": "2026-09-18T17:44:45.107Z"
+  },
+  {
+    "testCaseId": "TC-002",
+    "moduleId": "route-dashboard",
+    "subModuleId": "component-dash-greeting",
+    "functionalityId": "action-dash-view-greeting",
+    "label": "Viewed greeting",
+    "timestamp": "2026-09-18T17:44:45.107Z"
+  },
+  {
+    "testCaseId": "TC-002",
+    "moduleId": "route-dashboard",
+    "subModuleId": "component-dash-loans-card",
+    "functionalityId": null,
+    "label": "Loans service card",
+    "timestamp": "2026-09-18T17:44:45.157Z"
+  },
+  {
+    "testCaseId": "TC-002",
+    "moduleId": "route-dashboard",
+    "subModuleId": "component-dash-loans-card",
+    "functionalityId": "action-dash-open-loans",
+    "label": "Viewed Loans card",
+    "timestamp": "2026-09-18T17:44:45.157Z"
+  },
+  {
+    "testCaseId": "TC-002",
+    "moduleId": "route-dashboard",
+    "subModuleId": "component-dash-statements-card",
+    "functionalityId": null,
+    "label": "Statements service card",
+    "timestamp": "2026-09-18T17:44:45.165Z"
+  },
+  {
+    "testCaseId": "TC-002",
+    "moduleId": "route-dashboard",
+    "subModuleId": "component-dash-statements-card",
+    "functionalityId": "action-dash-open-statements",
+    "label": "Viewed Statements card",
+    "timestamp": "2026-09-18T17:44:45.165Z"
+  },
+  {
+    "testCaseId": "TC-002",
+    "moduleId": "route-dashboard",
+    "subModuleId": "component-dash-cards-card",
+    "functionalityId": null,
+    "label": "Cards service card",
+    "timestamp": "2026-09-18T17:44:45.182Z"
+  },
+  {
+    "testCaseId": "TC-002",
+    "moduleId": "route-dashboard",
+    "subModuleId": "component-dash-cards-card",
+    "functionalityId": "action-dash-open-cards",
+    "label": "Viewed Cards card",
+    "timestamp": "2026-09-18T17:44:45.182Z"
+  },
+  {
+    "testCaseId": "TC-002",
+    "moduleId": "route-dashboard",
+    "subModuleId": "component-dash-customers-card",
+    "functionalityId": null,
+    "label": "Customers service card",
+    "timestamp": "2026-09-18T17:44:45.190Z"
+  },
+  {
+    "testCaseId": "TC-002",
+    "moduleId": "route-dashboard",
+    "subModuleId": "component-dash-customers-card",
+    "functionalityId": "action-dash-open-customers",
+    "label": "Viewed Customers card",
+    "timestamp": "2026-09-18T17:44:45.190Z"
+  },
+  {
+    "testCaseId": "TC-002",
+    "moduleId": "route-dashboard",
+    "subModuleId": "component-dash-quick-links",
+    "functionalityId": null,
+    "label": "Quick links",
+    "timestamp": "2026-09-18T17:44:45.190Z"
+  },
+  {
+    "testCaseId": "TC-002",
+    "moduleId": "route-dashboard",
+    "subModuleId": "component-dash-quick-links",
+    "functionalityId": "action-dash-view-activity",
+    "label": "Viewed activity quick link",
+    "timestamp": "2026-09-18T17:44:45.190Z"
+  },
+  {
+    "testCaseId": "TC-003",
+    "moduleId": "route-users",
+    "subModuleId": null,
+    "functionalityId": null,
+    "label": "User Details",
+    "timestamp": "2026-09-18T17:44:46.231Z"
+  },
+  {
+    "testCaseId": "TC-003",
+    "moduleId": "route-users",
+    "subModuleId": "component-user-profile-header",
+    "functionalityId": null,
+    "label": "Profile header",
+    "timestamp": "2026-09-18T17:44:46.231Z"
+  },
+  {
+    "testCaseId": "TC-003",
+    "moduleId": "route-users",
+    "subModuleId": "component-user-profile-header",
+    "functionalityId": "action-user-open",
+    "label": "Opened user details",
+    "timestamp": "2026-09-18T17:44:46.231Z"
+  },
+  {
+    "testCaseId": "TC-003",
+    "moduleId": "route-users",
+    "subModuleId": "component-user-profile-header",
+    "functionalityId": "action-user-view-name",
+    "label": "Viewed profile name",
+    "timestamp": "2026-09-18T17:44:46.273Z"
+  },
+  {
+    "testCaseId": "TC-003",
+    "moduleId": "route-users",
+    "subModuleId": "component-user-profile-header",
+    "functionalityId": "action-user-view-status",
+    "label": "Viewed profile status",
+    "timestamp": "2026-09-18T17:44:46.273Z"
+  },
+  {
+    "testCaseId": "TC-003",
+    "moduleId": "route-users",
+    "subModuleId": "component-user-account-details",
+    "functionalityId": null,
+    "label": "Account details",
+    "timestamp": "2026-09-18T17:44:46.273Z"
+  },
+  {
+    "testCaseId": "TC-003",
+    "moduleId": "route-users",
+    "subModuleId": "component-user-account-details",
+    "functionalityId": "action-user-view-full-name",
+    "label": "Viewed account detail",
+    "timestamp": "2026-09-18T17:44:46.273Z"
+  },
+  {
+    "testCaseId": "TC-003",
+    "moduleId": "route-users",
+    "subModuleId": "component-user-account-details",
+    "functionalityId": "action-user-view-account-number",
+    "label": "Viewed account detail",
+    "timestamp": "2026-09-18T17:44:46.273Z"
+  },
+  {
+    "testCaseId": "TC-003",
+    "moduleId": "route-users",
+    "subModuleId": "component-user-account-details",
+    "functionalityId": "action-user-view-email",
+    "label": "Viewed account detail",
+    "timestamp": "2026-09-18T17:44:46.273Z"
+  },
+  {
+    "testCaseId": "TC-003",
+    "moduleId": "route-users",
+    "subModuleId": "component-user-account-details",
+    "functionalityId": "action-user-view-phone",
+    "label": "Viewed account detail",
+    "timestamp": "2026-09-18T17:44:46.273Z"
+  },
+  {
+    "testCaseId": "TC-003",
+    "moduleId": "route-users",
+    "subModuleId": "component-user-account-details",
+    "functionalityId": "action-user-view-address",
+    "label": "Viewed account detail",
+    "timestamp": "2026-09-18T17:44:46.273Z"
+  },
+  {
+    "testCaseId": "TC-003",
+    "moduleId": "route-users",
+    "subModuleId": "component-user-account-details",
+    "functionalityId": "action-user-view-account-type",
+    "label": "Viewed account detail",
+    "timestamp": "2026-09-18T17:44:46.273Z"
+  },
+  {
+    "testCaseId": "TC-004",
+    "moduleId": "route-loans",
+    "subModuleId": null,
+    "functionalityId": null,
+    "label": "Loans",
+    "timestamp": "2026-09-18T17:44:47.272Z"
+  },
+  {
+    "testCaseId": "TC-004",
+    "moduleId": "route-loans",
+    "subModuleId": "component-loan-list",
+    "functionalityId": null,
+    "label": "Loan list",
+    "timestamp": "2026-09-18T17:44:47.272Z"
+  },
+  {
+    "testCaseId": "TC-004",
+    "moduleId": "route-loans",
+    "subModuleId": "component-loan-list",
+    "functionalityId": "action-loan-open",
+    "label": "Opened loans",
+    "timestamp": "2026-09-18T17:44:47.272Z"
+  },
+  {
+    "testCaseId": "TC-004",
+    "moduleId": "route-loans",
+    "subModuleId": "component-loan-list",
+    "functionalityId": "action-loan-view-home-equity",
+    "label": "Viewed Home Equity Loan",
+    "timestamp": "2026-09-18T17:44:47.353Z"
+  },
+  {
+    "testCaseId": "TC-004",
+    "moduleId": "route-loans",
+    "subModuleId": "component-loan-list",
+    "functionalityId": "action-loan-view-auto",
+    "label": "Viewed Auto Loan",
+    "timestamp": "2026-09-18T17:44:47.353Z"
+  },
+  {
+    "testCaseId": "TC-004",
+    "moduleId": "route-loans",
+    "subModuleId": "component-loan-list",
+    "functionalityId": "action-loan-open-detail",
+    "label": "Opened loan detail",
+    "timestamp": "2026-09-18T17:44:47.353Z"
+  },
+  {
+    "testCaseId": "TC-004",
+    "moduleId": "route-loans",
+    "subModuleId": "component-loan-apply",
+    "functionalityId": null,
+    "label": "Apply for a loan",
+    "timestamp": "2026-09-18T17:44:47.353Z"
+  },
+  {
+    "testCaseId": "TC-004",
+    "moduleId": "route-loans",
+    "subModuleId": "component-loan-apply",
+    "functionalityId": "action-loan-apply",
+    "label": "Selected apply for a loan",
+    "timestamp": "2026-09-18T17:44:47.496Z"
+  },
+  {
+    "testCaseId": "TC-005",
+    "moduleId": "route-cards",
+    "subModuleId": null,
+    "functionalityId": null,
+    "label": "Credit Cards",
+    "timestamp": "2026-09-18T17:44:48.647Z"
+  },
+  {
+    "testCaseId": "TC-005",
+    "moduleId": "route-cards",
+    "subModuleId": "component-card-list",
+    "functionalityId": null,
+    "label": "Credit card list",
+    "timestamp": "2026-09-18T17:44:48.647Z"
+  },
+  {
+    "testCaseId": "TC-005",
+    "moduleId": "route-cards",
+    "subModuleId": "component-card-list",
+    "functionalityId": "action-card-open",
+    "label": "Opened credit cards",
+    "timestamp": "2026-09-18T17:44:48.647Z"
+  },
+  {
+    "testCaseId": "TC-005",
+    "moduleId": "route-cards",
+    "subModuleId": null,
+    "functionalityId": null,
+    "label": "Credit Cards",
+    "timestamp": "2026-09-18T17:45:06.545Z"
+  },
+  {
+    "testCaseId": "TC-005",
+    "moduleId": "route-cards",
+    "subModuleId": "component-card-list",
+    "functionalityId": null,
+    "label": "Credit card list",
+    "timestamp": "2026-09-18T17:45:06.545Z"
+  },
+  {
+    "testCaseId": "TC-005",
+    "moduleId": "route-cards",
+    "subModuleId": "component-card-list",
+    "functionalityId": "action-card-open",
+    "label": "Opened credit cards",
+    "timestamp": "2026-09-18T17:45:06.545Z"
+  },
+  {
+    "testCaseId": "TC-006",
+    "moduleId": "route-statements",
+    "subModuleId": null,
+    "functionalityId": null,
+    "label": "Statements",
+    "timestamp": "2026-09-18T17:45:24.483Z"
+  },
+  {
+    "testCaseId": "TC-006",
+    "moduleId": "route-statements",
+    "subModuleId": "component-statement-list",
+    "functionalityId": null,
+    "label": "Statement list",
+    "timestamp": "2026-09-18T17:45:24.483Z"
+  },
+  {
+    "testCaseId": "TC-006",
+    "moduleId": "route-statements",
+    "subModuleId": "component-statement-list",
+    "functionalityId": "action-statement-open",
+    "label": "Opened statements",
+    "timestamp": "2026-09-18T17:45:24.483Z"
+  },
+  {
+    "testCaseId": "TC-006",
+    "moduleId": "route-statements",
+    "subModuleId": "component-statement-list",
+    "functionalityId": "action-statement-view-september",
+    "label": "Viewed September statement",
+    "timestamp": "2026-09-18T17:45:24.546Z"
+  },
+  {
+    "testCaseId": "TC-006",
+    "moduleId": "route-statements",
+    "subModuleId": "component-statement-list",
+    "functionalityId": "action-statement-view-august",
+    "label": "Viewed August statement",
+    "timestamp": "2026-09-18T17:45:24.546Z"
+  },
+  {
+    "testCaseId": "TC-006",
+    "moduleId": "route-statements",
+    "subModuleId": "component-statement-list",
+    "functionalityId": "action-statement-view-july",
+    "label": "Viewed July statement",
+    "timestamp": "2026-09-18T17:45:24.546Z"
+  },
+  {
+    "testCaseId": "TC-006",
+    "moduleId": "route-statements",
+    "subModuleId": "component-statement-list",
+    "functionalityId": "action-statement-open-detail",
+    "label": "Opened statement detail",
+    "timestamp": "2026-09-18T17:45:24.546Z"
+  },
+  {
+    "testCaseId": "TC-006",
+    "moduleId": "route-statements",
+    "subModuleId": "component-statement-download",
+    "functionalityId": null,
+    "label": "Download statements",
+    "timestamp": "2026-09-18T17:45:24.546Z"
+  },
+  {
+    "testCaseId": "TC-006",
+    "moduleId": "route-statements",
+    "subModuleId": "component-statement-download",
+    "functionalityId": "action-statement-download",
+    "label": "Selected download statements",
+    "timestamp": "2026-09-18T17:45:24.586Z"
+  },
+  {
+    "testCaseId": "TC-007",
+    "moduleId": "route-activity",
+    "subModuleId": null,
+    "functionalityId": null,
+    "label": "Activity History",
+    "timestamp": "2026-09-18T17:45:25.562Z"
+  },
+  {
+    "testCaseId": "TC-007",
+    "moduleId": "route-activity",
+    "subModuleId": "component-activity-list",
+    "functionalityId": null,
+    "label": "Transaction list",
+    "timestamp": "2026-09-18T17:45:25.562Z"
+  },
+  {
+    "testCaseId": "TC-007",
+    "moduleId": "route-activity",
+    "subModuleId": "component-activity-list",
+    "functionalityId": "action-activity-open",
+    "label": "Opened activity history",
+    "timestamp": "2026-09-18T17:45:25.562Z"
+  },
+  {
+    "testCaseId": "TC-007",
+    "moduleId": "route-activity",
+    "subModuleId": "component-activity-list",
+    "functionalityId": "action-activity-view-deposit",
+    "label": "Viewed transaction history",
+    "timestamp": "2026-09-18T17:45:25.598Z"
+  },
+  {
+    "testCaseId": "TC-007",
+    "moduleId": "route-activity",
+    "subModuleId": "component-activity-list",
+    "functionalityId": "action-activity-view-payment",
+    "label": "Viewed transaction history",
+    "timestamp": "2026-09-18T17:45:25.598Z"
+  },
+  {
+    "testCaseId": "TC-007",
+    "moduleId": "route-activity",
+    "subModuleId": "component-activity-list",
+    "functionalityId": "action-activity-view-withdrawal",
+    "label": "Viewed transaction history",
+    "timestamp": "2026-09-18T17:45:25.598Z"
+  },
+  {
+    "testCaseId": "TC-007",
+    "moduleId": "route-activity",
+    "subModuleId": "component-activity-list",
+    "functionalityId": "action-activity-view-status",
+    "label": "Viewed transaction history",
+    "timestamp": "2026-09-18T17:45:25.598Z"
+  },
+  {
+    "testCaseId": "TC-007",
+    "moduleId": "route-activity",
+    "subModuleId": "component-activity-download",
+    "functionalityId": null,
+    "label": "Download activity",
+    "timestamp": "2026-09-18T17:45:25.598Z"
+  },
+  {
+    "testCaseId": "TC-007",
+    "moduleId": "route-activity",
+    "subModuleId": "component-activity-download",
+    "functionalityId": "action-activity-download",
+    "label": "Selected download activity",
+    "timestamp": "2026-09-18T17:45:25.626Z"
+  }
+]

@@ -1,0 +1,6 @@
+import { test } from '../framework/fixtures/test-fixture';
+import { F, M, S, W } from '../framework/coverage/coverage-ids';
+
+test('TC-005 - credit cards validates both cards and management action', async ({ pages, coverage }) => {
+  await pages.login.open(); await pages.login.signIn(); await pages.shell.goTo('cards'); coverage.module(M.CARDS, 'Credit Cards'); coverage.subModule(M.CARDS, S.CARD_LIST, 'Credit card list'); coverage.functionality(M.CARDS, S.CARD_LIST, F.CARD_OPEN, 'Opened credit cards', [W.CARD]); await pages.module.header('CARDS'); await pages.module.rows('CARDS'); await pages.module.expectRowTitle('Card that does not exist'); coverage.functionality(M.CARDS, S.CARD_LIST, F.CARD_VIEW_CASH_REWARDS, 'Viewed Cash Rewards Visa', [W.CARD]); coverage.functionality(M.CARDS, S.CARD_LIST, F.CARD_VIEW_POINTS, 'Viewed Points Visa', [W.CARD]); coverage.functionality(M.CARDS, S.CARD_LIST, F.CARD_OPEN_DETAIL, 'Opened card detail', [W.CARD]); coverage.subModule(M.CARDS, S.CARD_MANAGE, 'Manage cards'); await pages.module.action('CARDS'); await pages.module.clickAction('CARDS_ACTION', 'Manage cards'); coverage.functionality(M.CARDS, S.CARD_MANAGE, F.CARD_MANAGE, 'Selected manage cards', [W.CARD]);
+});

@@ -1,44 +1,73 @@
 {
   "execution": {
-    "total": 4,
-    "passed": 3,
-    "failed": 0,
+    "total": 8,
+    "passed": 6,
+    "failed": 1,
     "skipped": 1,
     "flaky": 0,
     "passPercent": 75,
-    "durationMs": 14105,
-    "startedAt": "9/18/2026, 5:17:19 PM",
-    "finishedAt": "9/18/2026, 5:17:33 PM"
+    "durationMs": 46849,
+    "startedAt": "9/18/2026, 5:44:39 PM",
+    "finishedAt": "9/18/2026, 5:45:26 PM"
   },
   "tests": [
     {
       "testCaseId": "TC-001",
-      "title": "TC-001 - login with valid credentials and print welcome text",
+      "title": "TC-001 - authentication accepts valid and rejects invalid credentials",
       "status": "passed",
-      "durationMs": 3804,
+      "durationMs": 4192,
       "retries": 0
     },
     {
       "testCaseId": "TC-002",
-      "title": "TC-002 - loans module lists existing loans",
+      "title": "TC-002 - dashboard exposes every banking service and quick link",
       "status": "passed",
-      "durationMs": 3646,
+      "durationMs": 978,
       "retries": 0
     },
     {
       "testCaseId": "TC-003",
-      "title": "TC-003 - user details shows customer profile",
+      "title": "TC-003 - user details validates profile and all account fields",
       "status": "passed",
-      "durationMs": 3249,
+      "durationMs": 1040,
       "retries": 0
     },
     {
       "testCaseId": "TC-004",
-      "title": "TC-004 - credit cards module lists customer cards",
+      "title": "TC-004 - loans validates applications, repayments, and apply action",
+      "status": "passed",
+      "durationMs": 1237,
+      "retries": 0
+    },
+    {
+      "testCaseId": "TC-005",
+      "title": "TC-005 - credit cards validates both cards and management action",
+      "status": "failed",
+      "durationMs": 34120,
+      "retries": 1,
+      "error": "Error: Row \"Card that does not exist\"\n\n\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('//article[contains(@class,\\'service-row\\')][.//h2[normalize-space()=\\'Card that does not exist\\']]').first()\nExpected: visible\nTimeout: 15000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Row \"Card that does not exist\" locator('//article[contains(@class,\\'service-row\\')][.//h2[normalize-space()=\\'Card that does not exist\\']]').first() with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for locator('//article[contains(@class,\\'service-row\\')][.//h2[normalize-space()=\\'Card that does not exist\\']]').first()\u001b[22m\n"
+    },
+    {
+      "testCaseId": "TC-006",
+      "title": "TC-006 - statements validates monthly documents and download action",
+      "status": "passed",
+      "durationMs": 1253,
+      "retries": 0
+    },
+    {
+      "testCaseId": "TC-007",
+      "title": "TC-007 - activity history validates transactions and download action",
+      "status": "passed",
+      "durationMs": 1000,
+      "retries": 0
+    },
+    {
+      "testCaseId": "TC-008",
+      "title": "TC-008 - preferences validates every setting and edit action",
       "status": "skipped",
-      "durationMs": 661,
+      "durationMs": 274,
       "retries": 0,
-      "skipReason": "Credit Cards automation not implemented yet — pending test data sign-off"
+      "skipReason": "Intentionally skipped for reporting validation"
     }
   ],
   "testGap": {
@@ -50,13 +79,13 @@
       "nodes": 75
     },
     "covered": {
-      "modules": 4,
-      "subModules": 6,
-      "functionality": 14,
-      "nodes": 24
+      "modules": 7,
+      "subModules": 17,
+      "functionality": 38,
+      "nodes": 62
     },
-    "coveragePercent": 32,
-    "gapPercent": 68,
+    "coveragePercent": 83,
+    "gapPercent": 17,
     "modules": [
       {
         "id": "route-auth",
@@ -65,9 +94,7 @@
         "risk": "high",
         "covered": true,
         "coveredBy": [
-          "TC-001",
-          "TC-002",
-          "TC-003"
+          "TC-001"
         ],
         "subModules": [
           {
@@ -75,9 +102,7 @@
             "name": "Login form",
             "covered": true,
             "coveredBy": [
-              "TC-001",
-              "TC-002",
-              "TC-003"
+              "TC-001"
             ],
             "functionality": [
               {
@@ -101,19 +126,19 @@
                 "name": "Sign in",
                 "covered": true,
                 "coveredBy": [
-                  "TC-001",
-                  "TC-002",
-                  "TC-003"
+                  "TC-001"
                 ]
               },
               {
                 "id": "action-auth-invalid-login",
                 "name": "Reject invalid credentials",
-                "covered": false,
-                "coveredBy": []
+                "covered": true,
+                "coveredBy": [
+                  "TC-001"
+                ]
               }
             ],
-            "functionalityCovered": 3
+            "functionalityCovered": 4
           },
           {
             "id": "component-session",
@@ -137,8 +162,8 @@
         ],
         "subModulesCovered": 2,
         "functionalityTotal": 5,
-        "functionalityCovered": 4,
-        "percent": 88
+        "functionalityCovered": 5,
+        "percent": 100
       },
       {
         "id": "route-dashboard",
@@ -147,7 +172,7 @@
         "risk": "medium",
         "covered": true,
         "coveredBy": [
-          "TC-001"
+          "TC-002"
         ],
         "subModules": [
           {
@@ -155,7 +180,7 @@
             "name": "Welcome greeting",
             "covered": true,
             "coveredBy": [
-              "TC-001"
+              "TC-002"
             ],
             "functionality": [
               {
@@ -163,7 +188,7 @@
                 "name": "View personalised greeting",
                 "covered": true,
                 "coveredBy": [
-                  "TC-001"
+                  "TC-002"
                 ]
               }
             ],
@@ -172,83 +197,103 @@
           {
             "id": "component-dash-loans-card",
             "name": "Loans service card",
-            "covered": false,
-            "coveredBy": [],
+            "covered": true,
+            "coveredBy": [
+              "TC-002"
+            ],
             "functionality": [
               {
                 "id": "action-dash-open-loans",
                 "name": "Open Loans from dashboard",
-                "covered": false,
-                "coveredBy": []
+                "covered": true,
+                "coveredBy": [
+                  "TC-002"
+                ]
               }
             ],
-            "functionalityCovered": 0
+            "functionalityCovered": 1
           },
           {
             "id": "component-dash-statements-card",
             "name": "Statements service card",
-            "covered": false,
-            "coveredBy": [],
+            "covered": true,
+            "coveredBy": [
+              "TC-002"
+            ],
             "functionality": [
               {
                 "id": "action-dash-open-statements",
                 "name": "Open Statements from dashboard",
-                "covered": false,
-                "coveredBy": []
+                "covered": true,
+                "coveredBy": [
+                  "TC-002"
+                ]
               }
             ],
-            "functionalityCovered": 0
+            "functionalityCovered": 1
           },
           {
             "id": "component-dash-cards-card",
             "name": "Cards service card",
-            "covered": false,
-            "coveredBy": [],
+            "covered": true,
+            "coveredBy": [
+              "TC-002"
+            ],
             "functionality": [
               {
                 "id": "action-dash-open-cards",
                 "name": "Open Cards from dashboard",
-                "covered": false,
-                "coveredBy": []
+                "covered": true,
+                "coveredBy": [
+                  "TC-002"
+                ]
               }
             ],
-            "functionalityCovered": 0
+            "functionalityCovered": 1
           },
           {
             "id": "component-dash-customers-card",
             "name": "Customers service card",
-            "covered": false,
-            "coveredBy": [],
+            "covered": true,
+            "coveredBy": [
+              "TC-002"
+            ],
             "functionality": [
               {
                 "id": "action-dash-open-customers",
                 "name": "Open Customers from dashboard",
-                "covered": false,
-                "coveredBy": []
+                "covered": true,
+                "coveredBy": [
+                  "TC-002"
+                ]
               }
             ],
-            "functionalityCovered": 0
+            "functionalityCovered": 1
           },
           {
             "id": "component-dash-quick-links",
             "name": "Quick links",
-            "covered": false,
-            "coveredBy": [],
+            "covered": true,
+            "coveredBy": [
+              "TC-002"
+            ],
             "functionality": [
               {
                 "id": "action-dash-view-activity",
                 "name": "View activity history link",
-                "covered": false,
-                "coveredBy": []
+                "covered": true,
+                "coveredBy": [
+                  "TC-002"
+                ]
               }
             ],
-            "functionalityCovered": 0
+            "functionalityCovered": 1
           }
         ],
-        "subModulesCovered": 1,
+        "subModulesCovered": 6,
         "functionalityTotal": 6,
-        "functionalityCovered": 1,
-        "percent": 23
+        "functionalityCovered": 6,
+        "percent": 100
       },
       {
         "id": "route-users",
@@ -306,14 +351,18 @@
               {
                 "id": "action-user-view-full-name",
                 "name": "View full name",
-                "covered": false,
-                "coveredBy": []
+                "covered": true,
+                "coveredBy": [
+                  "TC-003"
+                ]
               },
               {
                 "id": "action-user-view-account-number",
                 "name": "View account number",
-                "covered": false,
-                "coveredBy": []
+                "covered": true,
+                "coveredBy": [
+                  "TC-003"
+                ]
               },
               {
                 "id": "action-user-view-email",
@@ -326,14 +375,18 @@
               {
                 "id": "action-user-view-phone",
                 "name": "View phone number",
-                "covered": false,
-                "coveredBy": []
+                "covered": true,
+                "coveredBy": [
+                  "TC-003"
+                ]
               },
               {
                 "id": "action-user-view-address",
                 "name": "View home address",
-                "covered": false,
-                "coveredBy": []
+                "covered": true,
+                "coveredBy": [
+                  "TC-003"
+                ]
               },
               {
                 "id": "action-user-view-account-type",
@@ -344,13 +397,13 @@
                 ]
               }
             ],
-            "functionalityCovered": 2
+            "functionalityCovered": 6
           }
         ],
         "subModulesCovered": 2,
         "functionalityTotal": 9,
-        "functionalityCovered": 5,
-        "percent": 67
+        "functionalityCovered": 9,
+        "percent": 100
       },
       {
         "id": "route-loans",
@@ -359,7 +412,7 @@
         "risk": "high",
         "covered": true,
         "coveredBy": [
-          "TC-002"
+          "TC-004"
         ],
         "subModules": [
           {
@@ -367,7 +420,7 @@
             "name": "Loan list",
             "covered": true,
             "coveredBy": [
-              "TC-002"
+              "TC-004"
             ],
             "functionality": [
               {
@@ -375,7 +428,7 @@
                 "name": "Open loans list",
                 "covered": true,
                 "coveredBy": [
-                  "TC-002"
+                  "TC-004"
                 ]
               },
               {
@@ -383,7 +436,7 @@
                 "name": "View Home Equity Loan",
                 "covered": true,
                 "coveredBy": [
-                  "TC-002"
+                  "TC-004"
                 ]
               },
               {
@@ -391,7 +444,7 @@
                 "name": "View Auto Loan",
                 "covered": true,
                 "coveredBy": [
-                  "TC-002"
+                  "TC-004"
                 ]
               },
               {
@@ -399,7 +452,7 @@
                 "name": "Open a loan detail row",
                 "covered": true,
                 "coveredBy": [
-                  "TC-002"
+                  "TC-004"
                 ]
               }
             ],
@@ -408,43 +461,53 @@
           {
             "id": "component-loan-apply",
             "name": "Apply for a loan",
-            "covered": false,
-            "coveredBy": [],
+            "covered": true,
+            "coveredBy": [
+              "TC-004"
+            ],
             "functionality": [
               {
                 "id": "action-loan-apply",
                 "name": "Apply for a loan",
-                "covered": false,
-                "coveredBy": []
+                "covered": true,
+                "coveredBy": [
+                  "TC-004"
+                ]
               }
             ],
-            "functionalityCovered": 0
+            "functionalityCovered": 1
           }
         ],
-        "subModulesCovered": 1,
+        "subModulesCovered": 2,
         "functionalityTotal": 5,
-        "functionalityCovered": 4,
-        "percent": 75
+        "functionalityCovered": 5,
+        "percent": 100
       },
       {
         "id": "route-cards",
         "name": "Credit Cards",
         "path": "/creditcards",
         "risk": "high",
-        "covered": false,
-        "coveredBy": [],
+        "covered": true,
+        "coveredBy": [
+          "TC-005"
+        ],
         "subModules": [
           {
             "id": "component-card-list",
             "name": "Credit card list",
-            "covered": false,
-            "coveredBy": [],
+            "covered": true,
+            "coveredBy": [
+              "TC-005"
+            ],
             "functionality": [
               {
                 "id": "action-card-open",
                 "name": "Open credit cards list",
-                "covered": false,
-                "coveredBy": []
+                "covered": true,
+                "coveredBy": [
+                  "TC-005"
+                ]
               },
               {
                 "id": "action-card-view-cash-rewards",
@@ -465,7 +528,7 @@
                 "coveredBy": []
               }
             ],
-            "functionalityCovered": 0
+            "functionalityCovered": 1
           },
           {
             "id": "component-card-manage",
@@ -483,146 +546,182 @@
             "functionalityCovered": 0
           }
         ],
-        "subModulesCovered": 0,
+        "subModulesCovered": 1,
         "functionalityTotal": 5,
-        "functionalityCovered": 0,
-        "percent": 0
+        "functionalityCovered": 1,
+        "percent": 38
       },
       {
         "id": "route-statements",
         "name": "Statements",
         "path": "/statements",
         "risk": "medium",
-        "covered": false,
-        "coveredBy": [],
+        "covered": true,
+        "coveredBy": [
+          "TC-006"
+        ],
         "subModules": [
           {
             "id": "component-statement-list",
             "name": "Monthly statement list",
-            "covered": false,
-            "coveredBy": [],
+            "covered": true,
+            "coveredBy": [
+              "TC-006"
+            ],
             "functionality": [
               {
                 "id": "action-statement-open",
                 "name": "Open statements list",
-                "covered": false,
-                "coveredBy": []
+                "covered": true,
+                "coveredBy": [
+                  "TC-006"
+                ]
               },
               {
                 "id": "action-statement-view-september",
                 "name": "View September 2026 statement",
-                "covered": false,
-                "coveredBy": []
+                "covered": true,
+                "coveredBy": [
+                  "TC-006"
+                ]
               },
               {
                 "id": "action-statement-view-august",
                 "name": "View August 2026 statement",
-                "covered": false,
-                "coveredBy": []
+                "covered": true,
+                "coveredBy": [
+                  "TC-006"
+                ]
               },
               {
                 "id": "action-statement-view-july",
                 "name": "View July 2026 statement",
-                "covered": false,
-                "coveredBy": []
+                "covered": true,
+                "coveredBy": [
+                  "TC-006"
+                ]
               },
               {
                 "id": "action-statement-open-detail",
                 "name": "Open a statement detail row",
-                "covered": false,
-                "coveredBy": []
+                "covered": true,
+                "coveredBy": [
+                  "TC-006"
+                ]
               }
             ],
-            "functionalityCovered": 0
+            "functionalityCovered": 5
           },
           {
             "id": "component-statement-download",
             "name": "Download statements",
-            "covered": false,
-            "coveredBy": [],
+            "covered": true,
+            "coveredBy": [
+              "TC-006"
+            ],
             "functionality": [
               {
                 "id": "action-statement-download",
                 "name": "Download statements",
-                "covered": false,
-                "coveredBy": []
+                "covered": true,
+                "coveredBy": [
+                  "TC-006"
+                ]
               }
             ],
-            "functionalityCovered": 0
+            "functionalityCovered": 1
           }
         ],
-        "subModulesCovered": 0,
+        "subModulesCovered": 2,
         "functionalityTotal": 6,
-        "functionalityCovered": 0,
-        "percent": 0
+        "functionalityCovered": 6,
+        "percent": 100
       },
       {
         "id": "route-activity",
         "name": "Activity History",
         "path": "/activity",
         "risk": "low",
-        "covered": false,
-        "coveredBy": [],
+        "covered": true,
+        "coveredBy": [
+          "TC-007"
+        ],
         "subModules": [
           {
             "id": "component-activity-list",
             "name": "Transaction list",
-            "covered": false,
-            "coveredBy": [],
+            "covered": true,
+            "coveredBy": [
+              "TC-007"
+            ],
             "functionality": [
               {
                 "id": "action-activity-open",
                 "name": "Open activity history",
-                "covered": false,
-                "coveredBy": []
+                "covered": true,
+                "coveredBy": [
+                  "TC-007"
+                ]
               },
               {
                 "id": "action-activity-view-deposit",
                 "name": "View direct deposit",
-                "covered": false,
-                "coveredBy": []
+                "covered": true,
+                "coveredBy": [
+                  "TC-007"
+                ]
               },
               {
                 "id": "action-activity-view-payment",
                 "name": "View online payment",
-                "covered": false,
-                "coveredBy": []
+                "covered": true,
+                "coveredBy": [
+                  "TC-007"
+                ]
               },
               {
                 "id": "action-activity-view-withdrawal",
                 "name": "View ATM withdrawal",
-                "covered": false,
-                "coveredBy": []
+                "covered": true,
+                "coveredBy": [
+                  "TC-007"
+                ]
               },
               {
                 "id": "action-activity-view-status",
                 "name": "View transaction status badges",
-                "covered": false,
-                "coveredBy": []
+                "covered": true,
+                "coveredBy": [
+                  "TC-007"
+                ]
               }
             ],
-            "functionalityCovered": 0
+            "functionalityCovered": 5
           },
           {
             "id": "component-activity-download",
             "name": "Download activity",
-            "covered": false,
-            "coveredBy": [],
+            "covered": true,
+            "coveredBy": [
+              "TC-007"
+            ],
             "functionality": [
               {
                 "id": "action-activity-download",
                 "name": "Download activity",
-                "covered": false,
-                "coveredBy": []
+                "covered": true,
+                "coveredBy": [
+                  "TC-007"
+                ]
               }
             ],
-            "functionalityCovered": 0
+            "functionalityCovered": 1
           }
         ],
-        "subModulesCovered": 0,
+        "subModulesCovered": 2,
         "functionalityTotal": 6,
-        "functionalityCovered": 0,
-        "percent": 0
+        "functionalityCovered": 6,
+        "percent": 100
       },
       {
         "id": "route-preferences",
@@ -689,70 +788,14 @@
     ],
     "untouchedModules": [
       {
-        "module": "Credit Cards",
-        "risk": "high"
-      },
-      {
-        "module": "Statements",
-        "risk": "medium"
-      },
-      {
-        "module": "Activity History",
-        "risk": "low"
-      },
-      {
         "module": "Preferences",
         "risk": "low"
       }
     ],
     "untouchedSubModules": [
       {
-        "module": "Dashboard",
-        "subModule": "Loans service card"
-      },
-      {
-        "module": "Dashboard",
-        "subModule": "Statements service card"
-      },
-      {
-        "module": "Dashboard",
-        "subModule": "Cards service card"
-      },
-      {
-        "module": "Dashboard",
-        "subModule": "Customers service card"
-      },
-      {
-        "module": "Dashboard",
-        "subModule": "Quick links"
-      },
-      {
-        "module": "Loans",
-        "subModule": "Apply for a loan"
-      },
-      {
-        "module": "Credit Cards",
-        "subModule": "Credit card list"
-      },
-      {
         "module": "Credit Cards",
         "subModule": "Manage cards"
-      },
-      {
-        "module": "Statements",
-        "subModule": "Monthly statement list"
-      },
-      {
-        "module": "Statements",
-        "subModule": "Download statements"
-      },
-      {
-        "module": "Activity History",
-        "subModule": "Transaction list"
-      },
-      {
-        "module": "Activity History",
-        "subModule": "Download activity"
       },
       {
         "module": "Preferences",
@@ -764,66 +807,6 @@
       }
     ],
     "untouchedFunctionality": [
-      {
-        "module": "Authentication",
-        "subModule": "Login form",
-        "functionality": "Reject invalid credentials"
-      },
-      {
-        "module": "Dashboard",
-        "subModule": "Loans service card",
-        "functionality": "Open Loans from dashboard"
-      },
-      {
-        "module": "Dashboard",
-        "subModule": "Statements service card",
-        "functionality": "Open Statements from dashboard"
-      },
-      {
-        "module": "Dashboard",
-        "subModule": "Cards service card",
-        "functionality": "Open Cards from dashboard"
-      },
-      {
-        "module": "Dashboard",
-        "subModule": "Customers service card",
-        "functionality": "Open Customers from dashboard"
-      },
-      {
-        "module": "Dashboard",
-        "subModule": "Quick links",
-        "functionality": "View activity history link"
-      },
-      {
-        "module": "User Details",
-        "subModule": "Account details",
-        "functionality": "View full name"
-      },
-      {
-        "module": "User Details",
-        "subModule": "Account details",
-        "functionality": "View account number"
-      },
-      {
-        "module": "User Details",
-        "subModule": "Account details",
-        "functionality": "View phone number"
-      },
-      {
-        "module": "User Details",
-        "subModule": "Account details",
-        "functionality": "View home address"
-      },
-      {
-        "module": "Loans",
-        "subModule": "Apply for a loan",
-        "functionality": "Apply for a loan"
-      },
-      {
-        "module": "Credit Cards",
-        "subModule": "Credit card list",
-        "functionality": "Open credit cards list"
-      },
       {
         "module": "Credit Cards",
         "subModule": "Credit card list",
@@ -843,66 +826,6 @@
         "module": "Credit Cards",
         "subModule": "Manage cards",
         "functionality": "Manage cards"
-      },
-      {
-        "module": "Statements",
-        "subModule": "Monthly statement list",
-        "functionality": "Open statements list"
-      },
-      {
-        "module": "Statements",
-        "subModule": "Monthly statement list",
-        "functionality": "View September 2026 statement"
-      },
-      {
-        "module": "Statements",
-        "subModule": "Monthly statement list",
-        "functionality": "View August 2026 statement"
-      },
-      {
-        "module": "Statements",
-        "subModule": "Monthly statement list",
-        "functionality": "View July 2026 statement"
-      },
-      {
-        "module": "Statements",
-        "subModule": "Monthly statement list",
-        "functionality": "Open a statement detail row"
-      },
-      {
-        "module": "Statements",
-        "subModule": "Download statements",
-        "functionality": "Download statements"
-      },
-      {
-        "module": "Activity History",
-        "subModule": "Transaction list",
-        "functionality": "Open activity history"
-      },
-      {
-        "module": "Activity History",
-        "subModule": "Transaction list",
-        "functionality": "View direct deposit"
-      },
-      {
-        "module": "Activity History",
-        "subModule": "Transaction list",
-        "functionality": "View online payment"
-      },
-      {
-        "module": "Activity History",
-        "subModule": "Transaction list",
-        "functionality": "View ATM withdrawal"
-      },
-      {
-        "module": "Activity History",
-        "subModule": "Transaction list",
-        "functionality": "View transaction status badges"
-      },
-      {
-        "module": "Activity History",
-        "subModule": "Download activity",
-        "functionality": "Download activity"
       },
       {
         "module": "Preferences",
