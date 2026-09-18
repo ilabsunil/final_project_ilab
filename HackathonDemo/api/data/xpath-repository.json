@@ -1,0 +1,6 @@
+{
+  "loginSubmit": "//button[@type='submit']",
+  "moduleRow": "//div[contains(@class,'module-row')]",
+  "disabledModule": "//span[contains(normalize-space(),'Disabled')]",
+  "executionStatus": "//span[contains(@class,'status')]"
+}

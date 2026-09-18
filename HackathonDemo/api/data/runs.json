@@ -1,0 +1,4 @@
+[
+  { "id": "RUN-2409", "user": "Maya Chen", "status": "Completed", "currentModule": "Statements", "lastAction": "Monthly statements", "duration": "12m 42s", "timestamp": "Sep 17, 2026 09:40", "coverage": 88 },
+  { "id": "RUN-2408", "user": "Alex Rivera", "status": "Interrupted", "currentModule": "Loans", "lastAction": "Repayments", "duration": "08m 16s", "timestamp": "Sep 16, 2026 15:22", "coverage": 62 }
+]

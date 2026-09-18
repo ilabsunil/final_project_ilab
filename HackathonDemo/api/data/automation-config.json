@@ -1,0 +1,11 @@
+{
+  "applicationName": "Northstar Banking Application",
+  "baseUrl": "http://localhost:5173",
+  "defaultTimeoutMs": 5000,
+  "captureManualActions": true,
+  "captureAutomationActions": true,
+  "recoveryEnabled": true,
+  "testDataFile": "data/test-data.json",
+  "locatorFile": "data/locators.json",
+  "xpathFile": "data/xpath-repository.json"
+}

@@ -1,0 +1,32 @@
+# Node dependencies and build output
+**/node_modules/
+**/dist/
+**/playwright-report/
+**/test-results/
+**/.session/
+
+# .NET build output
+**/bin/
+**/obj/
+
+# Python caches and virtual environments
+**/__pycache__/
+*.py[cod]
+**/.venv/
+
+# Runtime coverage session data (regenerated on every test run)
+CoverageEngine/03-coverage-api/data/events.json
+CoverageEngine/03-coverage-api/data/sessions.json
+CoverageEngine/03-coverage-api/data/checkpoint-*.json
+
+# Local environment and editor files
+.env
+.env.*
+!.env.example
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini

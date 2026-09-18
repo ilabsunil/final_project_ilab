@@ -1,0 +1,5 @@
+{
+  "login": { "email": "input[name='email']", "password": "input[name='password']", "submit": "button[type='submit']" },
+  "navigation": { "dashboard": "[data-testid='nav-dashboard']", "loans": "[data-testid='nav-loans']", "statements": "[data-testid='nav-statements']" },
+  "coverage": { "startRun": "[data-testid='start-automation-run']", "recoveryBanner": "[data-testid='recovery-banner']" }
+}

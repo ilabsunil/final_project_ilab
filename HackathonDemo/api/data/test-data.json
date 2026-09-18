@@ -1,0 +1,5 @@
+{
+  "validUser": { "email": "maya.chen@northstarbank.com", "password": "demo123" },
+  "invalidUser": { "email": "invalid@example.com", "password": "wrong-password" },
+  "loanApplication": { "amount": 25000, "termMonths": 48 }
+}

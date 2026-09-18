@@ -1,0 +1,74 @@
+[
+  {
+    "Name": "Dashboard",
+    "SubModule": "Overview",
+    "Area": "Core",
+    "Implemented": true,
+    "Risk": "Low",
+    "Impact": "Executive view of quality health"
+  },
+  {
+    "Name": "User Details",
+    "SubModule": "Profile",
+    "Area": "Users",
+    "Implemented": true,
+    "Risk": "Medium",
+    "Impact": "Customer identity and profile workflows"
+  },
+  {
+    "Name": "User Details",
+    "SubModule": "Roles \u0026 access",
+    "Area": "Users",
+    "Implemented": true,
+    "Risk": "High",
+    "Impact": "Permission and entitlement workflows"
+  },
+  {
+    "Name": "Loans",
+    "SubModule": "Applications",
+    "Area": "Lending",
+    "Implemented": true,
+    "Risk": "High",
+    "Impact": "New lending applications and approvals"
+  },
+  {
+    "Name": "Loans",
+    "SubModule": "Repayments",
+    "Area": "Lending",
+    "Implemented": true,
+    "Risk": "Medium",
+    "Impact": "Repayment schedule and payment history"
+  },
+  {
+    "Name": "Credit Cards",
+    "SubModule": "Card overview",
+    "Area": "Cards",
+    "Implemented": true,
+    "Risk": "Medium",
+    "Impact": "Card status, limits, and balances"
+  },
+  {
+    "Name": "Credit Cards",
+    "SubModule": "Disputes",
+    "Area": "Cards",
+    "Implemented": false,
+    "Risk": "High",
+    "Impact": "Dispute submission and investigation"
+  },
+  {
+    "Name": "Statements",
+    "SubModule": "Monthly statements",
+    "Area": "Core",
+    "Implemented": true,
+    "Risk": "Medium",
+    "Impact": "Account statements and exports"
+  },
+  {
+    "Name": "Statements",
+    "SubModule": "Tax documents",
+    "Area": "Core",
+    "Implemented": true,
+    "Risk": "Low",
+    "Impact": "Year-end tax document retrieval"
+  }
+]

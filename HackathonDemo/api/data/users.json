@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Maya Chen",
+    "role": "Quality Lead",
+    "email": "maya.chen@northstarbank.com",
+    "password": "demo123"
+  },
+  {
+    "name": "Alex Rivera",
+    "role": "Developer",
+    "email": "alex.rivera@northstarbank.com",
+    "password": "demo123"
+  }
+]

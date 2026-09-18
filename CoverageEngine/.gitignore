@@ -1,0 +1,27 @@
+# .NET build output
+**/bin/
+**/obj/
+
+# Node dependencies and build output
+**/node_modules/
+**/dist/
+
+# Python caches
+**/__pycache__/
+*.py[cod]
+
+# Local environment and editor files
+.env
+.env.*
+!.env.example
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Runtime coverage session data (regenerated on every test run)
+03-coverage-api/data/events.json
+03-coverage-api/data/sessions.json
+03-coverage-api/data/checkpoint-*.json

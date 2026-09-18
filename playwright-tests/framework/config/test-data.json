@@ -1,0 +1,12 @@
+{
+  "baseUrl": "http://localhost:5173/",
+  "credentials": {
+    "username": "maya.chen@northstarbank.com",
+    "password": "demo123"
+  },
+  "coverage": {
+    "enabled": true,
+    "apiBaseUrl": "http://127.0.0.1:5070/api",
+    "sessionName": "Playwright automation session"
+  }
+}
