@@ -1,32 +1,26 @@
-# 🔒 Locked session-lifecycle structure — DO NOT MODIFY
+# 🔒 LOCKED — Plugin Session Lifecycle (do not modify)
 
-This folder implements the **run-scoped coverage plugin session lifecycle** exactly as
-required by the automation process. It is intentionally isolated so that day-to-day test
-authoring (new specs, locators, test data) never needs to touch it and cannot break it.
+Everything in `framework/session/` implements a **fixed** contract and must not be changed
+by test authors. It guarantees the following, once, for the whole run:
 
-## What it guarantees
+1. **On browser launch, the Coverage Intelligence browser extension is loaded** into
+   Chromium (see `session-launch.ts` → `sessionLaunchOptions`, wired in `playwright.config.ts`).
+2. **Before test execution starts, the plugin session is started** (`session-hooks.ts` →
+   `globalSessionSetup`, wired as Playwright `globalSetup`).
+3. **While tests execute, automation actions and validations are captured** into that one
+   session (`session-recorder.ts`, used by the coverage fixture).
+4. **After test execution completes, the plugin session is ended** (`session-hooks.ts` →
+   `globalSessionTeardown`, wired as Playwright `globalTeardown`).
 
-1. **Browser extension is loaded on launch.** The real Manifest V3 extension in
-   `CoverageEngine/05-browser-extension` is loaded into a persistent Chromium context.
-2. **The plugin session starts BEFORE test execution begins.** `global-setup` opens one
-   coverage session and writes its id to `.session/active-session.json`.
-3. **Automation actions and validations are captured during execution.** Every page gets
-   the capture script; events are forwarded to the same run-scoped session.
-4. **The plugin session ends AFTER execution completes.** `global-teardown` stops the
-   session, pulls its coverage report, and merges it with the CoverageEngine reports into
-   one combined report under `playwright-report/combined/`.
-
-## Files (all locked)
+Files:
 
 | File | Responsibility |
 | --- | --- |
-| `session-constants.ts` | Shared paths, ports, and the run-session file location. |
-| `session-manager.ts`   | Thin owner of the run-scoped session (start / persist / stop / report). |
-| `extension-launcher.ts`| Launches Chromium with the coverage extension loaded. |
-| `global-setup.ts`      | Starts the ONE plugin session before the whole run. |
-| `global-teardown.ts`   | Stops the session and builds the combined report. |
-| `combined-report.ts`   | Merges plugin-session coverage + CoverageEngine + test-case results. |
+| `session-config.ts`   | Fixed paths/URLs (extension dir, API base, session file). Reads only environment values. |
+| `session-client.ts`   | Thin CoverageEngine API client (start / events / stop / report). |
+| `session-launch.ts`   | Chromium launch options that load the extension on browser launch. |
+| `session-recorder.ts` | Per-test recorder that captures actions & validations into the run session. |
+| `session-hooks.ts`    | `globalSessionSetup` (start before run) and `globalSessionTeardown` (end after run). |
 
-> ⚠️ Changing anything in this folder is **not required** to add or maintain tests. Add
-> specs under `tests/`, update `framework/config/locators.json` and
-> `framework/config/test-data.json`, and this lifecycle keeps working unchanged.
+Test authors interact with capture only through the `coverage` fixture — never by editing
+these files. Adding new tests requires **no** changes here.

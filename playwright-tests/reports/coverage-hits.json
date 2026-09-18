@@ -1,0 +1,138 @@
+[
+  {
+    "testCaseId": "TC-001",
+    "moduleId": "route-auth",
+    "subModuleId": null,
+    "functionalityId": null,
+    "label": "Login page displayed",
+    "timestamp": "2026-09-18T16:00:03.436Z"
+  },
+  {
+    "testCaseId": "TC-001",
+    "moduleId": "route-auth",
+    "subModuleId": "component-login-form",
+    "functionalityId": "action-auth-enter-email",
+    "label": "Entered work email",
+    "timestamp": "2026-09-18T16:00:03.628Z"
+  },
+  {
+    "testCaseId": "TC-001",
+    "moduleId": "route-auth",
+    "subModuleId": "component-login-form",
+    "functionalityId": "action-auth-enter-password",
+    "label": "Entered password",
+    "timestamp": "2026-09-18T16:00:03.628Z"
+  },
+  {
+    "testCaseId": "TC-001",
+    "moduleId": "route-auth",
+    "subModuleId": "component-login-form",
+    "functionalityId": "action-auth-signin",
+    "label": "Signed in",
+    "timestamp": "2026-09-18T16:00:03.628Z"
+  },
+  {
+    "testCaseId": "TC-001",
+    "moduleId": "route-dashboard",
+    "subModuleId": "component-dash-greeting",
+    "functionalityId": "action-dash-view-greeting",
+    "label": "Validated welcome greeting",
+    "timestamp": "2026-09-18T16:00:03.747Z"
+  },
+  {
+    "testCaseId": "TC-001",
+    "moduleId": "route-auth",
+    "subModuleId": "component-session",
+    "functionalityId": "action-auth-signout",
+    "label": "Signed out",
+    "timestamp": "2026-09-18T16:00:03.859Z"
+  },
+  {
+    "testCaseId": "TC-002",
+    "moduleId": "route-auth",
+    "subModuleId": "component-login-form",
+    "functionalityId": "action-auth-signin",
+    "label": "Signed in",
+    "timestamp": "2026-09-18T16:00:06.615Z"
+  },
+  {
+    "testCaseId": "TC-002",
+    "moduleId": "route-loans",
+    "subModuleId": "component-loan-list",
+    "functionalityId": "action-loan-open",
+    "label": "Opened Loans list",
+    "timestamp": "2026-09-18T16:00:06.720Z"
+  },
+  {
+    "testCaseId": "TC-002",
+    "moduleId": "route-loans",
+    "subModuleId": "component-loan-list",
+    "functionalityId": "action-loan-view-home-equity",
+    "label": "Validated Home Equity Loan row",
+    "timestamp": "2026-09-18T16:00:06.784Z"
+  },
+  {
+    "testCaseId": "TC-002",
+    "moduleId": "route-loans",
+    "subModuleId": "component-loan-list",
+    "functionalityId": "action-loan-view-auto",
+    "label": "Validated Auto Loan row",
+    "timestamp": "2026-09-18T16:00:06.784Z"
+  },
+  {
+    "testCaseId": "TC-002",
+    "moduleId": "route-loans",
+    "subModuleId": "component-loan-list",
+    "functionalityId": "action-loan-open-detail",
+    "label": "Opened a loan detail row",
+    "timestamp": "2026-09-18T16:00:06.840Z"
+  },
+  {
+    "testCaseId": "TC-003",
+    "moduleId": "route-auth",
+    "subModuleId": "component-login-form",
+    "functionalityId": "action-auth-signin",
+    "label": "Signed in",
+    "timestamp": "2026-09-18T16:00:09.573Z"
+  },
+  {
+    "testCaseId": "TC-003",
+    "moduleId": "route-users",
+    "subModuleId": "component-user-profile-header",
+    "functionalityId": "action-user-open",
+    "label": "Opened User details",
+    "timestamp": "2026-09-18T16:00:09.657Z"
+  },
+  {
+    "testCaseId": "TC-003",
+    "moduleId": "route-users",
+    "subModuleId": "component-user-profile-header",
+    "functionalityId": "action-user-view-name",
+    "label": "Validated account holder name",
+    "timestamp": "2026-09-18T16:00:09.717Z"
+  },
+  {
+    "testCaseId": "TC-003",
+    "moduleId": "route-users",
+    "subModuleId": "component-user-profile-header",
+    "functionalityId": "action-user-view-status",
+    "label": "Validated account status",
+    "timestamp": "2026-09-18T16:00:09.717Z"
+  },
+  {
+    "testCaseId": "TC-003",
+    "moduleId": "route-users",
+    "subModuleId": "component-user-account-details",
+    "functionalityId": "action-user-view-email",
+    "label": "Validated email address",
+    "timestamp": "2026-09-18T16:00:09.743Z"
+  },
+  {
+    "testCaseId": "TC-003",
+    "moduleId": "route-users",
+    "subModuleId": "component-user-account-details",
+    "functionalityId": "action-user-view-account-type",
+    "label": "Validated account type",
+    "timestamp": "2026-09-18T16:00:09.743Z"
+  }
+]

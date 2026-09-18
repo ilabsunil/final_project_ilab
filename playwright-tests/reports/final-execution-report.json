@@ -1,0 +1,934 @@
+{
+  "execution": {
+    "total": 4,
+    "passed": 3,
+    "failed": 0,
+    "skipped": 1,
+    "flaky": 0,
+    "passPercent": 75,
+    "durationMs": 11335,
+    "startedAt": "9/18/2026, 3:59:59 PM",
+    "finishedAt": "9/18/2026, 4:00:10 PM"
+  },
+  "tests": [
+    {
+      "testCaseId": "TC-001",
+      "title": "TC-001 - login with valid credentials and print welcome text",
+      "status": "passed",
+      "durationMs": 3593,
+      "retries": 0
+    },
+    {
+      "testCaseId": "TC-002",
+      "title": "TC-002 - loans module lists existing loans",
+      "status": "passed",
+      "durationMs": 2924,
+      "retries": 0
+    },
+    {
+      "testCaseId": "TC-003",
+      "title": "TC-003 - user details shows customer profile",
+      "status": "passed",
+      "durationMs": 2881,
+      "retries": 0
+    },
+    {
+      "testCaseId": "TC-004",
+      "title": "TC-004 - credit cards module lists customer cards",
+      "status": "skipped",
+      "durationMs": 499,
+      "retries": 0,
+      "skipReason": "Credit Cards automation not implemented yet — pending test data sign-off"
+    }
+  ],
+  "testGap": {
+    "appName": "PNC Bank Digital Banking Application",
+    "totals": {
+      "modules": 8,
+      "subModules": 20,
+      "functionality": 47,
+      "nodes": 75
+    },
+    "covered": {
+      "modules": 4,
+      "subModules": 6,
+      "functionality": 14,
+      "nodes": 24
+    },
+    "coveragePercent": 32,
+    "gapPercent": 68,
+    "modules": [
+      {
+        "id": "route-auth",
+        "name": "Authentication",
+        "path": "/",
+        "risk": "high",
+        "covered": true,
+        "coveredBy": [
+          "TC-001",
+          "TC-002",
+          "TC-003"
+        ],
+        "subModules": [
+          {
+            "id": "component-login-form",
+            "name": "Login form",
+            "covered": true,
+            "coveredBy": [
+              "TC-001",
+              "TC-002",
+              "TC-003"
+            ],
+            "functionality": [
+              {
+                "id": "action-auth-enter-email",
+                "name": "Enter work email",
+                "covered": true,
+                "coveredBy": [
+                  "TC-001"
+                ]
+              },
+              {
+                "id": "action-auth-enter-password",
+                "name": "Enter password",
+                "covered": true,
+                "coveredBy": [
+                  "TC-001"
+                ]
+              },
+              {
+                "id": "action-auth-signin",
+                "name": "Sign in",
+                "covered": true,
+                "coveredBy": [
+                  "TC-001",
+                  "TC-002",
+                  "TC-003"
+                ]
+              },
+              {
+                "id": "action-auth-invalid-login",
+                "name": "Reject invalid credentials",
+                "covered": false,
+                "coveredBy": []
+              }
+            ],
+            "functionalityCovered": 3
+          },
+          {
+            "id": "component-session",
+            "name": "Session controls",
+            "covered": true,
+            "coveredBy": [
+              "TC-001"
+            ],
+            "functionality": [
+              {
+                "id": "action-auth-signout",
+                "name": "Sign out",
+                "covered": true,
+                "coveredBy": [
+                  "TC-001"
+                ]
+              }
+            ],
+            "functionalityCovered": 1
+          }
+        ],
+        "subModulesCovered": 2,
+        "functionalityTotal": 5,
+        "functionalityCovered": 4,
+        "percent": 88
+      },
+      {
+        "id": "route-dashboard",
+        "name": "Dashboard",
+        "path": "/dashboard",
+        "risk": "medium",
+        "covered": true,
+        "coveredBy": [
+          "TC-001"
+        ],
+        "subModules": [
+          {
+            "id": "component-dash-greeting",
+            "name": "Welcome greeting",
+            "covered": true,
+            "coveredBy": [
+              "TC-001"
+            ],
+            "functionality": [
+              {
+                "id": "action-dash-view-greeting",
+                "name": "View personalised greeting",
+                "covered": true,
+                "coveredBy": [
+                  "TC-001"
+                ]
+              }
+            ],
+            "functionalityCovered": 1
+          },
+          {
+            "id": "component-dash-loans-card",
+            "name": "Loans service card",
+            "covered": false,
+            "coveredBy": [],
+            "functionality": [
+              {
+                "id": "action-dash-open-loans",
+                "name": "Open Loans from dashboard",
+                "covered": false,
+                "coveredBy": []
+              }
+            ],
+            "functionalityCovered": 0
+          },
+          {
+            "id": "component-dash-statements-card",
+            "name": "Statements service card",
+            "covered": false,
+            "coveredBy": [],
+            "functionality": [
+              {
+                "id": "action-dash-open-statements",
+                "name": "Open Statements from dashboard",
+                "covered": false,
+                "coveredBy": []
+              }
+            ],
+            "functionalityCovered": 0
+          },
+          {
+            "id": "component-dash-cards-card",
+            "name": "Cards service card",
+            "covered": false,
+            "coveredBy": [],
+            "functionality": [
+              {
+                "id": "action-dash-open-cards",
+                "name": "Open Cards from dashboard",
+                "covered": false,
+                "coveredBy": []
+              }
+            ],
+            "functionalityCovered": 0
+          },
+          {
+            "id": "component-dash-customers-card",
+            "name": "Customers service card",
+            "covered": false,
+            "coveredBy": [],
+            "functionality": [
+              {
+                "id": "action-dash-open-customers",
+                "name": "Open Customers from dashboard",
+                "covered": false,
+                "coveredBy": []
+              }
+            ],
+            "functionalityCovered": 0
+          },
+          {
+            "id": "component-dash-quick-links",
+            "name": "Quick links",
+            "covered": false,
+            "coveredBy": [],
+            "functionality": [
+              {
+                "id": "action-dash-view-activity",
+                "name": "View activity history link",
+                "covered": false,
+                "coveredBy": []
+              }
+            ],
+            "functionalityCovered": 0
+          }
+        ],
+        "subModulesCovered": 1,
+        "functionalityTotal": 6,
+        "functionalityCovered": 1,
+        "percent": 23
+      },
+      {
+        "id": "route-users",
+        "name": "User Details",
+        "path": "/users",
+        "risk": "high",
+        "covered": true,
+        "coveredBy": [
+          "TC-003"
+        ],
+        "subModules": [
+          {
+            "id": "component-user-profile-header",
+            "name": "Profile header",
+            "covered": true,
+            "coveredBy": [
+              "TC-003"
+            ],
+            "functionality": [
+              {
+                "id": "action-user-open",
+                "name": "Open user details",
+                "covered": true,
+                "coveredBy": [
+                  "TC-003"
+                ]
+              },
+              {
+                "id": "action-user-view-name",
+                "name": "View account holder name",
+                "covered": true,
+                "coveredBy": [
+                  "TC-003"
+                ]
+              },
+              {
+                "id": "action-user-view-status",
+                "name": "View account status",
+                "covered": true,
+                "coveredBy": [
+                  "TC-003"
+                ]
+              }
+            ],
+            "functionalityCovered": 3
+          },
+          {
+            "id": "component-user-account-details",
+            "name": "Account details",
+            "covered": true,
+            "coveredBy": [
+              "TC-003"
+            ],
+            "functionality": [
+              {
+                "id": "action-user-view-full-name",
+                "name": "View full name",
+                "covered": false,
+                "coveredBy": []
+              },
+              {
+                "id": "action-user-view-account-number",
+                "name": "View account number",
+                "covered": false,
+                "coveredBy": []
+              },
+              {
+                "id": "action-user-view-email",
+                "name": "View email address",
+                "covered": true,
+                "coveredBy": [
+                  "TC-003"
+                ]
+              },
+              {
+                "id": "action-user-view-phone",
+                "name": "View phone number",
+                "covered": false,
+                "coveredBy": []
+              },
+              {
+                "id": "action-user-view-address",
+                "name": "View home address",
+                "covered": false,
+                "coveredBy": []
+              },
+              {
+                "id": "action-user-view-account-type",
+                "name": "View account type",
+                "covered": true,
+                "coveredBy": [
+                  "TC-003"
+                ]
+              }
+            ],
+            "functionalityCovered": 2
+          }
+        ],
+        "subModulesCovered": 2,
+        "functionalityTotal": 9,
+        "functionalityCovered": 5,
+        "percent": 67
+      },
+      {
+        "id": "route-loans",
+        "name": "Loans",
+        "path": "/loans",
+        "risk": "high",
+        "covered": true,
+        "coveredBy": [
+          "TC-002"
+        ],
+        "subModules": [
+          {
+            "id": "component-loan-list",
+            "name": "Loan list",
+            "covered": true,
+            "coveredBy": [
+              "TC-002"
+            ],
+            "functionality": [
+              {
+                "id": "action-loan-open",
+                "name": "Open loans list",
+                "covered": true,
+                "coveredBy": [
+                  "TC-002"
+                ]
+              },
+              {
+                "id": "action-loan-view-home-equity",
+                "name": "View Home Equity Loan",
+                "covered": true,
+                "coveredBy": [
+                  "TC-002"
+                ]
+              },
+              {
+                "id": "action-loan-view-auto",
+                "name": "View Auto Loan",
+                "covered": true,
+                "coveredBy": [
+                  "TC-002"
+                ]
+              },
+              {
+                "id": "action-loan-open-detail",
+                "name": "Open a loan detail row",
+                "covered": true,
+                "coveredBy": [
+                  "TC-002"
+                ]
+              }
+            ],
+            "functionalityCovered": 4
+          },
+          {
+            "id": "component-loan-apply",
+            "name": "Apply for a loan",
+            "covered": false,
+            "coveredBy": [],
+            "functionality": [
+              {
+                "id": "action-loan-apply",
+                "name": "Apply for a loan",
+                "covered": false,
+                "coveredBy": []
+              }
+            ],
+            "functionalityCovered": 0
+          }
+        ],
+        "subModulesCovered": 1,
+        "functionalityTotal": 5,
+        "functionalityCovered": 4,
+        "percent": 75
+      },
+      {
+        "id": "route-cards",
+        "name": "Credit Cards",
+        "path": "/creditcards",
+        "risk": "high",
+        "covered": false,
+        "coveredBy": [],
+        "subModules": [
+          {
+            "id": "component-card-list",
+            "name": "Credit card list",
+            "covered": false,
+            "coveredBy": [],
+            "functionality": [
+              {
+                "id": "action-card-open",
+                "name": "Open credit cards list",
+                "covered": false,
+                "coveredBy": []
+              },
+              {
+                "id": "action-card-view-cash-rewards",
+                "name": "View PNC Cash Rewards Visa",
+                "covered": false,
+                "coveredBy": []
+              },
+              {
+                "id": "action-card-view-points",
+                "name": "View PNC Points Visa",
+                "covered": false,
+                "coveredBy": []
+              },
+              {
+                "id": "action-card-open-detail",
+                "name": "Open a card detail row",
+                "covered": false,
+                "coveredBy": []
+              }
+            ],
+            "functionalityCovered": 0
+          },
+          {
+            "id": "component-card-manage",
+            "name": "Manage cards",
+            "covered": false,
+            "coveredBy": [],
+            "functionality": [
+              {
+                "id": "action-card-manage",
+                "name": "Manage cards",
+                "covered": false,
+                "coveredBy": []
+              }
+            ],
+            "functionalityCovered": 0
+          }
+        ],
+        "subModulesCovered": 0,
+        "functionalityTotal": 5,
+        "functionalityCovered": 0,
+        "percent": 0
+      },
+      {
+        "id": "route-statements",
+        "name": "Statements",
+        "path": "/statements",
+        "risk": "medium",
+        "covered": false,
+        "coveredBy": [],
+        "subModules": [
+          {
+            "id": "component-statement-list",
+            "name": "Monthly statement list",
+            "covered": false,
+            "coveredBy": [],
+            "functionality": [
+              {
+                "id": "action-statement-open",
+                "name": "Open statements list",
+                "covered": false,
+                "coveredBy": []
+              },
+              {
+                "id": "action-statement-view-september",
+                "name": "View September 2026 statement",
+                "covered": false,
+                "coveredBy": []
+              },
+              {
+                "id": "action-statement-view-august",
+                "name": "View August 2026 statement",
+                "covered": false,
+                "coveredBy": []
+              },
+              {
+                "id": "action-statement-view-july",
+                "name": "View July 2026 statement",
+                "covered": false,
+                "coveredBy": []
+              },
+              {
+                "id": "action-statement-open-detail",
+                "name": "Open a statement detail row",
+                "covered": false,
+                "coveredBy": []
+              }
+            ],
+            "functionalityCovered": 0
+          },
+          {
+            "id": "component-statement-download",
+            "name": "Download statements",
+            "covered": false,
+            "coveredBy": [],
+            "functionality": [
+              {
+                "id": "action-statement-download",
+                "name": "Download statements",
+                "covered": false,
+                "coveredBy": []
+              }
+            ],
+            "functionalityCovered": 0
+          }
+        ],
+        "subModulesCovered": 0,
+        "functionalityTotal": 6,
+        "functionalityCovered": 0,
+        "percent": 0
+      },
+      {
+        "id": "route-activity",
+        "name": "Activity History",
+        "path": "/activity",
+        "risk": "low",
+        "covered": false,
+        "coveredBy": [],
+        "subModules": [
+          {
+            "id": "component-activity-list",
+            "name": "Transaction list",
+            "covered": false,
+            "coveredBy": [],
+            "functionality": [
+              {
+                "id": "action-activity-open",
+                "name": "Open activity history",
+                "covered": false,
+                "coveredBy": []
+              },
+              {
+                "id": "action-activity-view-deposit",
+                "name": "View direct deposit",
+                "covered": false,
+                "coveredBy": []
+              },
+              {
+                "id": "action-activity-view-payment",
+                "name": "View online payment",
+                "covered": false,
+                "coveredBy": []
+              },
+              {
+                "id": "action-activity-view-withdrawal",
+                "name": "View ATM withdrawal",
+                "covered": false,
+                "coveredBy": []
+              },
+              {
+                "id": "action-activity-view-status",
+                "name": "View transaction status badges",
+                "covered": false,
+                "coveredBy": []
+              }
+            ],
+            "functionalityCovered": 0
+          },
+          {
+            "id": "component-activity-download",
+            "name": "Download activity",
+            "covered": false,
+            "coveredBy": [],
+            "functionality": [
+              {
+                "id": "action-activity-download",
+                "name": "Download activity",
+                "covered": false,
+                "coveredBy": []
+              }
+            ],
+            "functionalityCovered": 0
+          }
+        ],
+        "subModulesCovered": 0,
+        "functionalityTotal": 6,
+        "functionalityCovered": 0,
+        "percent": 0
+      },
+      {
+        "id": "route-preferences",
+        "name": "Preferences",
+        "path": "/preferences",
+        "risk": "low",
+        "covered": false,
+        "coveredBy": [],
+        "subModules": [
+          {
+            "id": "component-preferences-list",
+            "name": "Preferences list",
+            "covered": false,
+            "coveredBy": [],
+            "functionality": [
+              {
+                "id": "action-preferences-open",
+                "name": "Open preferences",
+                "covered": false,
+                "coveredBy": []
+              },
+              {
+                "id": "action-preferences-view-email",
+                "name": "View email notifications setting",
+                "covered": false,
+                "coveredBy": []
+              },
+              {
+                "id": "action-preferences-view-paperless",
+                "name": "View paperless statements setting",
+                "covered": false,
+                "coveredBy": []
+              },
+              {
+                "id": "action-preferences-view-2fa",
+                "name": "View two-step verification setting",
+                "covered": false,
+                "coveredBy": []
+              }
+            ],
+            "functionalityCovered": 0
+          },
+          {
+            "id": "component-preferences-edit",
+            "name": "Edit preferences",
+            "covered": false,
+            "coveredBy": [],
+            "functionality": [
+              {
+                "id": "action-preferences-edit",
+                "name": "Edit preferences",
+                "covered": false,
+                "coveredBy": []
+              }
+            ],
+            "functionalityCovered": 0
+          }
+        ],
+        "subModulesCovered": 0,
+        "functionalityTotal": 5,
+        "functionalityCovered": 0,
+        "percent": 0
+      }
+    ],
+    "untouchedModules": [
+      {
+        "module": "Credit Cards",
+        "risk": "high"
+      },
+      {
+        "module": "Statements",
+        "risk": "medium"
+      },
+      {
+        "module": "Activity History",
+        "risk": "low"
+      },
+      {
+        "module": "Preferences",
+        "risk": "low"
+      }
+    ],
+    "untouchedSubModules": [
+      {
+        "module": "Dashboard",
+        "subModule": "Loans service card"
+      },
+      {
+        "module": "Dashboard",
+        "subModule": "Statements service card"
+      },
+      {
+        "module": "Dashboard",
+        "subModule": "Cards service card"
+      },
+      {
+        "module": "Dashboard",
+        "subModule": "Customers service card"
+      },
+      {
+        "module": "Dashboard",
+        "subModule": "Quick links"
+      },
+      {
+        "module": "Loans",
+        "subModule": "Apply for a loan"
+      },
+      {
+        "module": "Credit Cards",
+        "subModule": "Credit card list"
+      },
+      {
+        "module": "Credit Cards",
+        "subModule": "Manage cards"
+      },
+      {
+        "module": "Statements",
+        "subModule": "Monthly statement list"
+      },
+      {
+        "module": "Statements",
+        "subModule": "Download statements"
+      },
+      {
+        "module": "Activity History",
+        "subModule": "Transaction list"
+      },
+      {
+        "module": "Activity History",
+        "subModule": "Download activity"
+      },
+      {
+        "module": "Preferences",
+        "subModule": "Preferences list"
+      },
+      {
+        "module": "Preferences",
+        "subModule": "Edit preferences"
+      }
+    ],
+    "untouchedFunctionality": [
+      {
+        "module": "Authentication",
+        "subModule": "Login form",
+        "functionality": "Reject invalid credentials"
+      },
+      {
+        "module": "Dashboard",
+        "subModule": "Loans service card",
+        "functionality": "Open Loans from dashboard"
+      },
+      {
+        "module": "Dashboard",
+        "subModule": "Statements service card",
+        "functionality": "Open Statements from dashboard"
+      },
+      {
+        "module": "Dashboard",
+        "subModule": "Cards service card",
+        "functionality": "Open Cards from dashboard"
+      },
+      {
+        "module": "Dashboard",
+        "subModule": "Customers service card",
+        "functionality": "Open Customers from dashboard"
+      },
+      {
+        "module": "Dashboard",
+        "subModule": "Quick links",
+        "functionality": "View activity history link"
+      },
+      {
+        "module": "User Details",
+        "subModule": "Account details",
+        "functionality": "View full name"
+      },
+      {
+        "module": "User Details",
+        "subModule": "Account details",
+        "functionality": "View account number"
+      },
+      {
+        "module": "User Details",
+        "subModule": "Account details",
+        "functionality": "View phone number"
+      },
+      {
+        "module": "User Details",
+        "subModule": "Account details",
+        "functionality": "View home address"
+      },
+      {
+        "module": "Loans",
+        "subModule": "Apply for a loan",
+        "functionality": "Apply for a loan"
+      },
+      {
+        "module": "Credit Cards",
+        "subModule": "Credit card list",
+        "functionality": "Open credit cards list"
+      },
+      {
+        "module": "Credit Cards",
+        "subModule": "Credit card list",
+        "functionality": "View PNC Cash Rewards Visa"
+      },
+      {
+        "module": "Credit Cards",
+        "subModule": "Credit card list",
+        "functionality": "View PNC Points Visa"
+      },
+      {
+        "module": "Credit Cards",
+        "subModule": "Credit card list",
+        "functionality": "Open a card detail row"
+      },
+      {
+        "module": "Credit Cards",
+        "subModule": "Manage cards",
+        "functionality": "Manage cards"
+      },
+      {
+        "module": "Statements",
+        "subModule": "Monthly statement list",
+        "functionality": "Open statements list"
+      },
+      {
+        "module": "Statements",
+        "subModule": "Monthly statement list",
+        "functionality": "View September 2026 statement"
+      },
+      {
+        "module": "Statements",
+        "subModule": "Monthly statement list",
+        "functionality": "View August 2026 statement"
+      },
+      {
+        "module": "Statements",
+        "subModule": "Monthly statement list",
+        "functionality": "View July 2026 statement"
+      },
+      {
+        "module": "Statements",
+        "subModule": "Monthly statement list",
+        "functionality": "Open a statement detail row"
+      },
+      {
+        "module": "Statements",
+        "subModule": "Download statements",
+        "functionality": "Download statements"
+      },
+      {
+        "module": "Activity History",
+        "subModule": "Transaction list",
+        "functionality": "Open activity history"
+      },
+      {
+        "module": "Activity History",
+        "subModule": "Transaction list",
+        "functionality": "View direct deposit"
+      },
+      {
+        "module": "Activity History",
+        "subModule": "Transaction list",
+        "functionality": "View online payment"
+      },
+      {
+        "module": "Activity History",
+        "subModule": "Transaction list",
+        "functionality": "View ATM withdrawal"
+      },
+      {
+        "module": "Activity History",
+        "subModule": "Transaction list",
+        "functionality": "View transaction status badges"
+      },
+      {
+        "module": "Activity History",
+        "subModule": "Download activity",
+        "functionality": "Download activity"
+      },
+      {
+        "module": "Preferences",
+        "subModule": "Preferences list",
+        "functionality": "Open preferences"
+      },
+      {
+        "module": "Preferences",
+        "subModule": "Preferences list",
+        "functionality": "View email notifications setting"
+      },
+      {
+        "module": "Preferences",
+        "subModule": "Preferences list",
+        "functionality": "View paperless statements setting"
+      },
+      {
+        "module": "Preferences",
+        "subModule": "Preferences list",
+        "functionality": "View two-step verification setting"
+      },
+      {
+        "module": "Preferences",
+        "subModule": "Edit preferences",
+        "functionality": "Edit preferences"
+      }
+    ]
+  }
+}

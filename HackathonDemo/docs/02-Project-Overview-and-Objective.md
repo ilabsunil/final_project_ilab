@@ -1,11 +1,11 @@
-# Northstar Bank Quality Platform
+# PNC Bank Quality Platform
 ## Project Overview and Objective
 
 **Hackathon theme:** Optimize Repetitive Tasks and Improve Productivity
 
 ## Executive Summary
 
-Northstar Bank Quality Platform is an intelligent quality engineering demonstrator for banking applications. It combines application functionality, reusable automation concepts, coverage intelligence, and execution recovery in one workspace.
+PNC Bank Quality Platform is an intelligent quality engineering demonstrator for banking applications. It combines application functionality, reusable automation concepts, coverage intelligence, and execution recovery in one workspace.
 
 The platform is designed to answer a more useful question than whether a test passed:
 

@@ -18,7 +18,7 @@ The API runs on `http://localhost:5050` and the Vite client on `http://localhost
 
 The .NET solution is `BankQualityPlatform.slnx`.
 
-Demo credentials: `maya.chen@northstarbank.com` / `demo123`
+Demo credentials: `maya.chen@pnc.com` / `demo123`
 
 ## JSON-backed data
 

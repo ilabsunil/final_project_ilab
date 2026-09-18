@@ -1,23 +1,230 @@
 {
   "application": {
-    "id": "northstar-banking",
-    "name": "Northstar Banking Application",
+    "id": "pnc-banking",
+    "name": "PNC Bank Digital Banking Application",
     "baseUrl": "http://localhost:5173",
     "routes": [
       {
+        "id": "route-auth",
+        "path": "/",
+        "name": "Authentication",
+        "risk": "high",
+        "components": [
+          {
+            "id": "component-login-form",
+            "name": "Login form",
+            "selector": ".login-card",
+            "actions": [
+              {
+                "id": "action-auth-enter-email",
+                "name": "Enter work email",
+                "event": "input"
+              },
+              {
+                "id": "action-auth-enter-password",
+                "name": "Enter password",
+                "event": "input"
+              },
+              {
+                "id": "action-auth-signin",
+                "name": "Sign in",
+                "event": "submit"
+              },
+              {
+                "id": "action-auth-invalid-login",
+                "name": "Reject invalid credentials",
+                "event": "submit"
+              }
+            ],
+            "workflows": [
+              "workflow-authentication"
+            ]
+          },
+          {
+            "id": "component-session",
+            "name": "Session controls",
+            "selector": ".logout",
+            "actions": [
+              {
+                "id": "action-auth-signout",
+                "name": "Sign out",
+                "event": "click"
+              }
+            ],
+            "workflows": [
+              "workflow-authentication"
+            ]
+          }
+        ]
+      },
+      {
         "id": "route-dashboard",
         "path": "/dashboard",
-        "name": "Command center",
+        "name": "Dashboard",
         "risk": "medium",
         "components": [
           {
-            "id": "component-dashboard-summary",
-            "name": "Coverage summary",
-            "selector": "[data-coverage-id='dashboard-summary']",
+            "id": "component-dash-greeting",
+            "name": "Welcome greeting",
+            "selector": ".banking-hero h1",
             "actions": [
-              { "id": "action-dashboard-view", "name": "View summary", "event": "click" }
+              {
+                "id": "action-dash-view-greeting",
+                "name": "View personalised greeting",
+                "event": "view"
+              }
             ],
-            "workflows": ["workflow-quality-review"]
+            "workflows": [
+              "workflow-banking-overview"
+            ]
+          },
+          {
+            "id": "component-dash-loans-card",
+            "name": "Loans service card",
+            "selector": ".service-card:has-text('Loans')",
+            "actions": [
+              {
+                "id": "action-dash-open-loans",
+                "name": "Open Loans from dashboard",
+                "event": "click"
+              }
+            ],
+            "workflows": [
+              "workflow-banking-overview"
+            ]
+          },
+          {
+            "id": "component-dash-statements-card",
+            "name": "Statements service card",
+            "selector": ".service-card:has-text('Statements')",
+            "actions": [
+              {
+                "id": "action-dash-open-statements",
+                "name": "Open Statements from dashboard",
+                "event": "click"
+              }
+            ],
+            "workflows": [
+              "workflow-banking-overview"
+            ]
+          },
+          {
+            "id": "component-dash-cards-card",
+            "name": "Cards service card",
+            "selector": ".service-card:has-text('Cards')",
+            "actions": [
+              {
+                "id": "action-dash-open-cards",
+                "name": "Open Cards from dashboard",
+                "event": "click"
+              }
+            ],
+            "workflows": [
+              "workflow-banking-overview"
+            ]
+          },
+          {
+            "id": "component-dash-customers-card",
+            "name": "Customers service card",
+            "selector": ".service-card:has-text('Customers')",
+            "actions": [
+              {
+                "id": "action-dash-open-customers",
+                "name": "Open Customers from dashboard",
+                "event": "click"
+              }
+            ],
+            "workflows": [
+              "workflow-banking-overview"
+            ]
+          },
+          {
+            "id": "component-dash-quick-links",
+            "name": "Quick links",
+            "selector": ".banking-quick-links",
+            "actions": [
+              {
+                "id": "action-dash-view-activity",
+                "name": "View activity history link",
+                "event": "click"
+              }
+            ],
+            "workflows": [
+              "workflow-banking-overview"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "route-users",
+        "path": "/users",
+        "name": "User Details",
+        "risk": "high",
+        "components": [
+          {
+            "id": "component-user-profile-header",
+            "name": "Profile header",
+            "selector": ".profile-header",
+            "actions": [
+              {
+                "id": "action-user-open",
+                "name": "Open user details",
+                "event": "click"
+              },
+              {
+                "id": "action-user-view-name",
+                "name": "View account holder name",
+                "event": "view"
+              },
+              {
+                "id": "action-user-view-status",
+                "name": "View account status",
+                "event": "view"
+              }
+            ],
+            "workflows": [
+              "workflow-user-profile"
+            ]
+          },
+          {
+            "id": "component-user-account-details",
+            "name": "Account details",
+            "selector": ".detail-grid",
+            "actions": [
+              {
+                "id": "action-user-view-full-name",
+                "name": "View full name",
+                "event": "view"
+              },
+              {
+                "id": "action-user-view-account-number",
+                "name": "View account number",
+                "event": "view"
+              },
+              {
+                "id": "action-user-view-email",
+                "name": "View email address",
+                "event": "view"
+              },
+              {
+                "id": "action-user-view-phone",
+                "name": "View phone number",
+                "event": "view"
+              },
+              {
+                "id": "action-user-view-address",
+                "name": "View home address",
+                "event": "view"
+              },
+              {
+                "id": "action-user-view-account-type",
+                "name": "View account type",
+                "event": "view"
+              }
+            ],
+            "workflows": [
+              "workflow-user-profile"
+            ]
           }
         ]
       },
@@ -28,40 +235,336 @@
         "risk": "high",
         "components": [
           {
-            "id": "component-loan-applications",
-            "name": "Loan applications",
-            "selector": "[data-coverage-id='loan-applications']",
+            "id": "component-loan-list",
+            "name": "Loan list",
+            "selector": ".banking-list",
             "actions": [
-              { "id": "action-loan-open", "name": "Open applications", "event": "click" },
-              { "id": "action-loan-submit", "name": "Submit application", "event": "submit" }
+              {
+                "id": "action-loan-open",
+                "name": "Open loans list",
+                "event": "click"
+              },
+              {
+                "id": "action-loan-view-home-equity",
+                "name": "View Home Equity Loan",
+                "event": "view"
+              },
+              {
+                "id": "action-loan-view-auto",
+                "name": "View Auto Loan",
+                "event": "view"
+              },
+              {
+                "id": "action-loan-open-detail",
+                "name": "Open a loan detail row",
+                "event": "click"
+              }
             ],
-            "workflows": ["workflow-loan-application"]
+            "workflows": [
+              "workflow-loan-application"
+            ]
+          },
+          {
+            "id": "component-loan-apply",
+            "name": "Apply for a loan",
+            "selector": "button:has-text('Apply for a loan')",
+            "actions": [
+              {
+                "id": "action-loan-apply",
+                "name": "Apply for a loan",
+                "event": "click"
+              }
+            ],
+            "workflows": [
+              "workflow-loan-application"
+            ]
           }
         ]
       },
       {
-        "id": "route-cards-disputes",
-        "path": "/cards/disputes",
-        "name": "Card disputes",
+        "id": "route-cards",
+        "path": "/creditcards",
+        "name": "Credit Cards",
         "risk": "high",
         "components": [
           {
-            "id": "component-dispute-form",
-            "name": "Dispute form",
-            "selector": "[data-coverage-id='dispute-form']",
+            "id": "component-card-list",
+            "name": "Credit card list",
+            "selector": ".banking-list",
             "actions": [
-              { "id": "action-dispute-open", "name": "Open dispute form", "event": "click" },
-              { "id": "action-dispute-submit", "name": "Submit dispute", "event": "submit" }
+              {
+                "id": "action-card-open",
+                "name": "Open credit cards list",
+                "event": "click"
+              },
+              {
+                "id": "action-card-view-cash-rewards",
+                "name": "View PNC Cash Rewards Visa",
+                "event": "view"
+              },
+              {
+                "id": "action-card-view-points",
+                "name": "View PNC Points Visa",
+                "event": "view"
+              },
+              {
+                "id": "action-card-open-detail",
+                "name": "Open a card detail row",
+                "event": "click"
+              }
             ],
-            "workflows": ["workflow-card-dispute"]
+            "workflows": [
+              "workflow-card-management"
+            ]
+          },
+          {
+            "id": "component-card-manage",
+            "name": "Manage cards",
+            "selector": "button:has-text('Manage cards')",
+            "actions": [
+              {
+                "id": "action-card-manage",
+                "name": "Manage cards",
+                "event": "click"
+              }
+            ],
+            "workflows": [
+              "workflow-card-management"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "route-statements",
+        "path": "/statements",
+        "name": "Statements",
+        "risk": "medium",
+        "components": [
+          {
+            "id": "component-statement-list",
+            "name": "Monthly statement list",
+            "selector": ".banking-list",
+            "actions": [
+              {
+                "id": "action-statement-open",
+                "name": "Open statements list",
+                "event": "click"
+              },
+              {
+                "id": "action-statement-view-september",
+                "name": "View September 2026 statement",
+                "event": "view"
+              },
+              {
+                "id": "action-statement-view-august",
+                "name": "View August 2026 statement",
+                "event": "view"
+              },
+              {
+                "id": "action-statement-view-july",
+                "name": "View July 2026 statement",
+                "event": "view"
+              },
+              {
+                "id": "action-statement-open-detail",
+                "name": "Open a statement detail row",
+                "event": "click"
+              }
+            ],
+            "workflows": [
+              "workflow-statement-review"
+            ]
+          },
+          {
+            "id": "component-statement-download",
+            "name": "Download statements",
+            "selector": "button:has-text('Download statements')",
+            "actions": [
+              {
+                "id": "action-statement-download",
+                "name": "Download statements",
+                "event": "click"
+              }
+            ],
+            "workflows": [
+              "workflow-statement-review"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "route-activity",
+        "path": "/activity",
+        "name": "Activity History",
+        "risk": "low",
+        "components": [
+          {
+            "id": "component-activity-list",
+            "name": "Transaction list",
+            "selector": ".banking-list",
+            "actions": [
+              {
+                "id": "action-activity-open",
+                "name": "Open activity history",
+                "event": "click"
+              },
+              {
+                "id": "action-activity-view-deposit",
+                "name": "View direct deposit",
+                "event": "view"
+              },
+              {
+                "id": "action-activity-view-payment",
+                "name": "View online payment",
+                "event": "view"
+              },
+              {
+                "id": "action-activity-view-withdrawal",
+                "name": "View ATM withdrawal",
+                "event": "view"
+              },
+              {
+                "id": "action-activity-view-status",
+                "name": "View transaction status badges",
+                "event": "view"
+              }
+            ],
+            "workflows": [
+              "workflow-activity-review"
+            ]
+          },
+          {
+            "id": "component-activity-download",
+            "name": "Download activity",
+            "selector": "button:has-text('Download activity')",
+            "actions": [
+              {
+                "id": "action-activity-download",
+                "name": "Download activity",
+                "event": "click"
+              }
+            ],
+            "workflows": [
+              "workflow-activity-review"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "route-preferences",
+        "path": "/preferences",
+        "name": "Preferences",
+        "risk": "low",
+        "components": [
+          {
+            "id": "component-preferences-list",
+            "name": "Preferences list",
+            "selector": ".banking-list",
+            "actions": [
+              {
+                "id": "action-preferences-open",
+                "name": "Open preferences",
+                "event": "click"
+              },
+              {
+                "id": "action-preferences-view-email",
+                "name": "View email notifications setting",
+                "event": "view"
+              },
+              {
+                "id": "action-preferences-view-paperless",
+                "name": "View paperless statements setting",
+                "event": "view"
+              },
+              {
+                "id": "action-preferences-view-2fa",
+                "name": "View two-step verification setting",
+                "event": "view"
+              }
+            ],
+            "workflows": [
+              "workflow-preferences"
+            ]
+          },
+          {
+            "id": "component-preferences-edit",
+            "name": "Edit preferences",
+            "selector": "button:has-text('Edit preferences')",
+            "actions": [
+              {
+                "id": "action-preferences-edit",
+                "name": "Edit preferences",
+                "event": "click"
+              }
+            ],
+            "workflows": [
+              "workflow-preferences"
+            ]
           }
         ]
       }
     ],
     "workflows": [
-      { "id": "workflow-quality-review", "name": "Review quality coverage", "requiredActions": ["action-dashboard-view"] },
-      { "id": "workflow-loan-application", "name": "Complete loan application", "requiredActions": ["action-loan-open", "action-loan-submit"] },
-      { "id": "workflow-card-dispute", "name": "Submit card dispute", "requiredActions": ["action-dispute-open", "action-dispute-submit"] }
+      {
+        "id": "workflow-authentication",
+        "name": "Authenticate",
+        "requiredActions": [
+          "action-auth-signin"
+        ]
+      },
+      {
+        "id": "workflow-banking-overview",
+        "name": "Review banking services",
+        "requiredActions": [
+          "action-dash-view-greeting"
+        ]
+      },
+      {
+        "id": "workflow-user-profile",
+        "name": "Review customer profile",
+        "requiredActions": [
+          "action-user-open",
+          "action-user-view-email"
+        ]
+      },
+      {
+        "id": "workflow-loan-application",
+        "name": "Manage loans",
+        "requiredActions": [
+          "action-loan-open",
+          "action-loan-apply"
+        ]
+      },
+      {
+        "id": "workflow-card-management",
+        "name": "Manage credit cards",
+        "requiredActions": [
+          "action-card-open",
+          "action-card-manage"
+        ]
+      },
+      {
+        "id": "workflow-statement-review",
+        "name": "Review statements",
+        "requiredActions": [
+          "action-statement-open",
+          "action-statement-download"
+        ]
+      },
+      {
+        "id": "workflow-activity-review",
+        "name": "Review activity history",
+        "requiredActions": [
+          "action-activity-open"
+        ]
+      },
+      {
+        "id": "workflow-preferences",
+        "name": "Manage preferences",
+        "requiredActions": [
+          "action-preferences-open"
+        ]
+      }
     ]
   }
 }

@@ -1,0 +1,109 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>PNC Bank — Test Execution &amp; Test Gap Report</title><style>
+:root{--orange:#f58025;--orange-d:#d96a12;--ink:#0f1b2d;--ink2:#33475b;--muted:#6b7c93;--line:#e6ebf1;--bg:#f4f6fa;--card:#fff;
+--green:#1f9d55;--green-s:#e6f7ee;--amber:#c9820a;--amber-s:#fdf3e0;--red:#d64545;--red-s:#fdecec;--blue:#2563eb;--blue-s:#e8f0ff;
+--shadow:0 10px 30px rgba(15,27,45,.08);--shadow-s:0 2px 10px rgba(15,27,45,.06)}
+*{box-sizing:border-box}body{margin:0;font-family:"Segoe UI",system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.5}
+.wrap{max-width:1200px;margin:0 auto;padding:32px 24px 64px}
+.hero{background:linear-gradient(135deg,#12233b,#1c3a5e 60%,#245078);color:#fff;border-radius:20px;padding:34px 38px;position:relative;overflow:hidden;box-shadow:var(--shadow)}
+.hero::after{content:"";position:absolute;right:-60px;top:-60px;width:260px;height:260px;background:radial-gradient(circle,rgba(245,128,37,.35),transparent 70%)}
+.brand{display:flex;align-items:center;gap:14px;margin-bottom:18px}
+.logo{width:46px;height:46px;border-radius:12px;background:var(--orange);display:grid;place-items:center;font-weight:800;box-shadow:0 6px 16px rgba(245,128,37,.4)}
+.brand small{display:block;opacity:.75;font-size:12px;letter-spacing:.14em;text-transform:uppercase}.brand strong{font-size:19px}
+.hero h1{margin:6px 0 8px;font-size:30px}.hero p{margin:0;opacity:.85;max-width:680px}
+.meta{display:flex;flex-wrap:wrap;gap:22px;margin-top:22px;font-size:13px}.meta span{display:block;opacity:.6;font-size:11px;text-transform:uppercase;letter-spacing:.1em}
+.badge{position:absolute;right:34px;top:34px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:8px 16px;font-size:13px;font-weight:600}
+.badge.ok{color:#c7f5da}.badge.bad{color:#ffd0d0}
+.grid{display:grid;gap:18px;margin-top:26px}.k6{grid-template-columns:repeat(6,1fr)}.two{grid-template-columns:1fr 1fr}
+@media(max-width:1000px){.k6{grid-template-columns:repeat(3,1fr)}.two{grid-template-columns:1fr}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow-s)}
+.kpi{padding:18px 20px}.kpi .l{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.kpi .v{font-size:30px;font-weight:800;margin:6px 0 2px}.kpi .s{font-size:12px;color:var(--ink2)}
+.g .v{color:var(--green)}.a .v{color:var(--amber)}.r .v{color:var(--red)}.b .v{color:var(--blue)}.i .v{color:var(--ink)}
+.panel{padding:24px 26px}.panel h2{margin:0 0 4px;font-size:17px}.hint{color:var(--muted);font-size:13px;margin:0 0 18px}
+.donuts{display:flex;gap:34px;flex-wrap:wrap;align-items:center;justify-content:space-around}
+.donut{--v:0;--c:var(--green);width:150px;height:150px;border-radius:50%;display:grid;place-items:center;background:conic-gradient(var(--c) calc(var(--v)*1%),var(--line) 0)}
+.donut i{width:110px;height:110px;background:var(--card);border-radius:50%;display:grid;place-items:center;text-align:center}
+.donut b{font-size:28px;font-weight:800;display:block}.donut span{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+.legend{display:flex;flex-direction:column;gap:10px;min-width:170px}.legend .row{display:flex;align-items:center;gap:10px;font-size:14px}
+.legend i{width:12px;height:12px;border-radius:3px}.legend b{margin-left:auto}
+table{width:100%;border-collapse:collapse;font-size:14px}
+thead th{text-align:left;font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);padding:12px 14px;border-bottom:2px solid var(--line)}
+tbody td{padding:12px 14px;border-bottom:1px solid var(--line);vertical-align:middle}tbody tr:hover{background:#fafcff}
+.tc{font-weight:700}.tc small{display:block;font-weight:400;color:var(--muted);font-size:12px}
+.pill{display:inline-flex;align-items:center;gap:6px;padding:4px 11px;border-radius:999px;font-size:12px;font-weight:700}
+.pill.pass{background:var(--green-s);color:var(--green)}.pill.fail{background:var(--red-s);color:var(--red)}
+.pill.skip{background:var(--amber-s);color:var(--amber)}.pill.flaky{background:var(--blue-s);color:var(--blue)}
+.pill.cov{background:var(--green-s);color:var(--green)}.pill.gap{background:var(--red-s);color:var(--red)}.pill.part{background:var(--amber-s);color:var(--amber)}
+.mini{display:flex;align-items:center;gap:8px}.mini .t{flex:1;height:7px;background:var(--line);border-radius:999px;overflow:hidden;min-width:70px}
+.mini .f{height:100%;border-radius:999px}.mini b{font-size:12px;min-width:38px;text-align:right}
+.hi{background:var(--green)}.md{background:var(--amber)}.lo{background:var(--red)}
+.tag{display:inline-block;background:var(--blue-s);color:var(--blue);border-radius:6px;padding:2px 8px;font-size:12px;font-weight:600}
+.risk{display:inline-block;border-radius:6px;padding:2px 8px;font-size:11px;font-weight:700;text-transform:uppercase}
+.risk.high{background:var(--red-s);color:var(--red)}.risk.medium{background:var(--amber-s);color:var(--amber)}.risk.low{background:var(--green-s);color:var(--green)}
+.sub td:first-child{padding-left:38px;color:var(--ink2)}.fn td:first-child{padding-left:62px;color:var(--muted);font-size:13px}
+.sec{margin:34px 0 8px;font-size:20px;display:flex;align-items:center;gap:10px}.sec .rule{flex:1;height:1px;background:var(--line)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}.chip{background:var(--red-s);color:var(--red);border-radius:8px;padding:6px 11px;font-size:13px;font-weight:600}
+.chip small{display:block;font-weight:400;color:#a45;font-size:11px}.chip.ok{background:var(--green-s);color:var(--green)}
+.err{font-family:Consolas,monospace;font-size:12px;color:var(--red);background:var(--red-s);padding:8px 10px;border-radius:8px;white-space:pre-wrap;max-width:560px}
+.note{background:var(--blue-s);border:1px solid #c7d7ff;color:#1e3a8a;border-radius:12px;padding:14px 18px;font-size:13px;margin-top:22px}
+.foot{margin-top:30px;text-align:center;color:var(--muted);font-size:12px}
+</style></head>
+<body><div class="wrap">
+<header class="hero">
+<div class="brand"><div class="logo">PNC</div><div><small>PNC Bank · Quality Platform</small><strong>Test Execution &amp; Test Gap Report</strong></div></div>
+<h1>PNC Bank Digital Banking Application</h1>
+<p>Execution results for every test case, combined with CoverageEngine module inventory analysis showing which modules, sub-modules and functionality remain untouched by automation.</p>
+<div class="meta">
+<div><span>Started</span>9/18/2026, 3:59:59 PM</div><div><span>Finished</span>9/18/2026, 4:00:10 PM</div>
+<div><span>Total duration</span>11.3s</div><div><span>Browser</span>chromium · video on</div>
+</div></header>
+<section class="grid k6">
+<div class="card kpi i"><div class="l">Total tests</div><div class="v">4</div><div class="s">test cases executed</div></div>
+<div class="card kpi g"><div class="l">Passed</div><div class="v">3</div><div class="s">75% pass rate</div></div>
+<div class="card kpi r"><div class="l">Failed</div><div class="v">0</div><div class="s">no failures</div></div>
+<div class="card kpi a"><div class="l">Skipped</div><div class="v">1</div><div class="s">not executed</div></div>
+<div class="card kpi b"><div class="l">Coverage</div><div class="v">32%</div><div class="s">24/75 inventory nodes</div></div>
+<div class="card kpi r"><div class="l">Test gap</div><div class="v">68%</div><div class="s">51 untouched nodes</div></div>
+</section>
+<section class="grid two">
+<div class="card panel"><h2>Execution outcome</h2><p class="hint">Pass percentage across all executed test cases.</p>
+<div class="donuts"><div class="donut" style="--v:75;--c:var(--green)"><i><span></span><b>75%</b><span>pass rate</span></i></div>
+<div class="legend">
+<div class="row"><i style="background:var(--green)"></i>Passed<b>3</b></div>
+<div class="row"><i style="background:var(--red)"></i>Failed<b>0</b></div>
+<div class="row"><i style="background:var(--amber)"></i>Skipped<b>1</b></div>
+<div class="row"><i style="background:var(--blue)"></i>Flaky<b>0</b></div></div></div></div>
+<div class="card panel"><h2>Coverage vs. test gap</h2><p class="hint">Overall, against the full CoverageEngine inventory.</p>
+<div class="donuts"><div class="donut" style="--v:32;--c:var(--blue)"><i><span></span><b>32%</b><span>covered</span></i></div>
+<div class="legend">
+<div class="row"><i style="background:var(--blue)"></i>Modules<b>4/8</b></div>
+<div class="row"><i style="background:var(--blue)"></i>Sub-modules<b>6/20</b></div>
+<div class="row"><i style="background:var(--blue)"></i>Functionality<b>14/47</b></div>
+<div class="row"><i style="background:var(--red)"></i>Test gap<b>68%</b></div></div></div></div>
+</section>
+<h2 class="sec">Test case results <span class="rule"></span></h2>
+<div class="card panel" style="padding:6px 6px 4px"><table>
+<thead><tr><th>Test case</th><th>Status</th><th>Duration</th><th>Retries</th><th>Details</th></tr></thead>
+<tbody><tr><td class="tc">TC-001<small>login with valid credentials and print welcome text</small></td>
+<td><span class="pill pass">● Passed</span></td><td>3.6s</td><td>0</td><td><span style="color:var(--muted)">—</span></td></tr><tr><td class="tc">TC-002<small>loans module lists existing loans</small></td>
+<td><span class="pill pass">● Passed</span></td><td>2.9s</td><td>0</td><td><span style="color:var(--muted)">—</span></td></tr><tr><td class="tc">TC-003<small>user details shows customer profile</small></td>
+<td><span class="pill pass">● Passed</span></td><td>2.9s</td><td>0</td><td><span style="color:var(--muted)">—</span></td></tr><tr><td class="tc">TC-004<small>credit cards module lists customer cards</small></td>
+<td><span class="pill skip">● Skipped</span></td><td>499ms</td><td>0</td><td><span style="color:var(--amber)">Credit Cards automation not implemented yet — pending test data sign-off</span></td></tr></tbody></table></div>
+<h2 class="sec">Test gap — untouched by any test case <span class="rule"></span></h2>
+<div class="card panel">
+<p class="hint">Everything below exists in the CoverageEngine inventory but was <b>not exercised by any test case</b> in this run. These are the candidates for new automation.</p>
+<h2 style="font-size:14px;margin-top:8px">Untouched modules (4)</h2>
+<div class="chips"><span class="chip">Credit Cards<small>risk: high</small></span><span class="chip">Statements<small>risk: medium</small></span><span class="chip">Activity History<small>risk: low</small></span><span class="chip">Preferences<small>risk: low</small></span></div>
+<h2 style="font-size:14px;margin-top:20px">Untouched sub-modules (14)</h2>
+<div class="chips"><span class="chip">Loans service card<small>Dashboard</small></span><span class="chip">Statements service card<small>Dashboard</small></span><span class="chip">Cards service card<small>Dashboard</small></span><span class="chip">Customers service card<small>Dashboard</small></span><span class="chip">Quick links<small>Dashboard</small></span><span class="chip">Apply for a loan<small>Loans</small></span><span class="chip">Credit card list<small>Credit Cards</small></span><span class="chip">Manage cards<small>Credit Cards</small></span><span class="chip">Monthly statement list<small>Statements</small></span><span class="chip">Download statements<small>Statements</small></span><span class="chip">Transaction list<small>Activity History</small></span><span class="chip">Download activity<small>Activity History</small></span><span class="chip">Preferences list<small>Preferences</small></span><span class="chip">Edit preferences<small>Preferences</small></span></div>
+<h2 style="font-size:14px;margin-top:20px">Untouched functionality (33)</h2>
+<div class="chips"><span class="chip">Reject invalid credentials<small>Authentication › Login form</small></span><span class="chip">Open Loans from dashboard<small>Dashboard › Loans service card</small></span><span class="chip">Open Statements from dashboard<small>Dashboard › Statements service card</small></span><span class="chip">Open Cards from dashboard<small>Dashboard › Cards service card</small></span><span class="chip">Open Customers from dashboard<small>Dashboard › Customers service card</small></span><span class="chip">View activity history link<small>Dashboard › Quick links</small></span><span class="chip">View full name<small>User Details › Account details</small></span><span class="chip">View account number<small>User Details › Account details</small></span><span class="chip">View phone number<small>User Details › Account details</small></span><span class="chip">View home address<small>User Details › Account details</small></span><span class="chip">Apply for a loan<small>Loans › Apply for a loan</small></span><span class="chip">Open credit cards list<small>Credit Cards › Credit card list</small></span><span class="chip">View PNC Cash Rewards Visa<small>Credit Cards › Credit card list</small></span><span class="chip">View PNC Points Visa<small>Credit Cards › Credit card list</small></span><span class="chip">Open a card detail row<small>Credit Cards › Credit card list</small></span><span class="chip">Manage cards<small>Credit Cards › Manage cards</small></span><span class="chip">Open statements list<small>Statements › Monthly statement list</small></span><span class="chip">View September 2026 statement<small>Statements › Monthly statement list</small></span><span class="chip">View August 2026 statement<small>Statements › Monthly statement list</small></span><span class="chip">View July 2026 statement<small>Statements › Monthly statement list</small></span><span class="chip">Open a statement detail row<small>Statements › Monthly statement list</small></span><span class="chip">Download statements<small>Statements › Download statements</small></span><span class="chip">Open activity history<small>Activity History › Transaction list</small></span><span class="chip">View direct deposit<small>Activity History › Transaction list</small></span><span class="chip">View online payment<small>Activity History › Transaction list</small></span><span class="chip">View ATM withdrawal<small>Activity History › Transaction list</small></span><span class="chip">View transaction status badges<small>Activity History › Transaction list</small></span><span class="chip">Download activity<small>Activity History › Download activity</small></span><span class="chip">Open preferences<small>Preferences › Preferences list</small></span><span class="chip">View email notifications setting<small>Preferences › Preferences list</small></span><span class="chip">View paperless statements setting<small>Preferences › Preferences list</small></span><span class="chip">View two-step verification setting<small>Preferences › Preferences list</small></span><span class="chip">Edit preferences<small>Preferences › Edit preferences</small></span></div>
+</div>
+<div class="note"><strong>How the numbers are calculated.</strong>
+Pass % = passed ÷ total test cases. Coverage % = (modules + sub-modules + functionality touched by <em>any</em> test) ÷ all
+75 inventory nodes from CoverageEngine (8 modules, 20 sub-modules,
+47 functionality). Test-gap % = 100 − coverage %. Anything with no test case is listed as <b>untouched</b>.</div>
+<p class="foot">PNC Bank Quality Platform · Playwright POM + CoverageEngine · generated 9/18/2026, 4:00:10 PM</p>
+</div></body></html>

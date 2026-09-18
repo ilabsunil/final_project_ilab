@@ -1,14 +1,32 @@
 [
   {
     "name": "Maya Chen",
-    "role": "Quality Lead",
-    "email": "maya.chen@northstarbank.com",
+    "role": "Banking Administrator",
+    "email": "maya.chen@pnc.com",
     "password": "demo123"
   },
   {
     "name": "Alex Rivera",
     "role": "Developer",
-    "email": "alex.rivera@northstarbank.com",
+    "email": "alex.rivera@pnc.com",
     "password": "demo123"
+  },
+  {
+    "name": "Sunil",
+    "role": "Customer",
+    "email": "Sunil@pnc.com",
+    "password": "Sunil@123"
+  },
+  {
+    "name": "Prasanth",
+    "role": "Customer",
+    "email": "Prasanth@pnc.com",
+    "password": "Prasanth@123"
+  },
+  {
+    "name": "Lakshman",
+    "role": "Customer",
+    "email": "Lakshman@pnc.com",
+    "password": "Lakshman@123"
   }
 ]

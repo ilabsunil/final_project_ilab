@@ -1,9 +1,9 @@
-# Northstar Bank Quality Platform
+# PNC Bank Quality Platform
 ## Presentation Content
 
 This file mirrors the generated PowerPoint deck and can also be used as a speaking script.
 
-### Slide 1 - Northstar Bank Quality Platform
+### Slide 1 - PNC Bank Quality Platform
 
 **Optimize Repetitive Tasks and Improve Productivity**
 

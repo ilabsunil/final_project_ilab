@@ -1,4 +1,4 @@
-# Northstar Bank Quality Platform
+# PNC Bank Quality Platform
 ## Run and Test Guide
 
 **Version:** 1.0  
@@ -99,14 +99,14 @@ Keep both terminals running.
 Use the JSON-backed demo account:
 
 ```text
-Email: maya.chen@northstarbank.com
+Email: maya.chen@pnc.com
 Password: demo123
 ```
 
 Additional demo user:
 
 ```text
-Email: alex.rivera@northstarbank.com
+Email: alex.rivera@pnc.com
 Password: demo123
 ```
 
@@ -115,11 +115,11 @@ Password: demo123
 ### 6.1 Login and application shell
 
 1. Open `http://localhost:5173`.
-2. Confirm the Northstar Bank login page appears.
+2. Confirm the PNC Bank login page appears.
 3. Enter the demo credentials.
 4. Confirm the dashboard opens.
 5. Verify the header shows workspace and user information.
-6. Verify the footer shows Northstar Bank support information.
+6. Verify the footer shows PNC Bank support information.
 
 ### 6.2 Dashboard coverage test
 

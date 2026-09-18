@@ -25,7 +25,7 @@ void WriteJson<T>(string fileName, T value)
     File.WriteAllText(Path.Combine(dataDirectory, fileName), JsonSerializer.Serialize(value, jsonOptions));
 }
 
-app.MapGet("/api/health", () => Results.Ok(new { status = "healthy", service = "Bank Quality API" }));
+app.MapGet("/api/health", () => Results.Ok(new { status = "healthy", service = "PNC Banking API" }));
 app.MapPost("/api/auth/login", (LoginRequest request) =>
 {
     var user = ReadUsers().FirstOrDefault(candidate => candidate.Email.Equals(request.Email, StringComparison.OrdinalIgnoreCase) && candidate.Password == request.Password);

@@ -1,0 +1,132 @@
+[35m[2026-09-18T15:39:17.341Z] [RUN     ] GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…[0m
+[35m[2026-09-18T15:39:17.343Z] [RUN     ] RUN START  -+ app=http://localhost:5173/ -+ retries=2 -+ workers=1[0m
+[35m[2026-09-18T15:39:17.381Z] [RUN     ] Plugin session STARTED before execution: S-4EF6DC01[0m
+[35m[2026-09-18T15:39:17.381Z] [RUN     ] Gˆ«Gˆ«Gˆ«Gˆ«Gˆ«Gˆ«Gˆ«Gˆ«Gˆ«Gˆ«Gˆ«Gˆ«Gˆ«Gˆ«Gˆ«Gˆ«Gˆ«Gˆ«Gˆ«Gˆ«Gˆ«Gˆ«Gˆ«Gˆ«Gˆ«Gˆ«Gˆ«Gˆ«Gˆ«Gˆ«Gˆ«Gˆ«Gˆ«Gˆ«Gˆ«Gˆ«Gˆ«Gˆ«Gˆ«Gˆ«Gˆ«Gˆ«Gˆ«Gˆ«Gˆ«Gˆ«Gˆ«Gˆ«Gˆ«Gˆ«Gˆ«Gˆ«Gˆ«Gˆ«Gˆ«Gˆ«Gˆ«Gˆ«Gˆ«Gˆ«Gˆ«Gˆ«Gˆ«Gˆ«[0m
+
+Running 4 tests using 1 worker
+
+[2026-09-18T15:39:18.169Z] [TEST    ] [TC-001] G˚¶ START  TC-001 - login with valid credentials and print welcome text
+[2026-09-18T15:39:19.010Z] [ACTION  ] [TC-001] [step 1] Navigate to http://localhost:5173/
+[2026-09-18T15:39:19.640Z] [ACTION  ] [TC-001] [step 2] Clear any saved browser session (localStorage) so login is shown
+[2026-09-18T15:39:20.975Z] [INFO    ] [TC-001] Page URL is http://localhost:5173/
+[2026-09-18T15:39:20.975Z] [VALIDATE] [TC-001] Validating: Login heading contains "Welcome back"
+[2026-09-18T15:39:21.011Z] [PASS    ] [TC-001] G£ˆ Login heading shows "Welcome back"
+[2026-09-18T15:39:21.012Z] [VALIDATE] [TC-001] Validating: Email / user-id field is visible
+[2026-09-18T15:39:21.023Z] [PASS    ] [TC-001] G£ˆ Email / user-id field is visible
+[2026-09-18T15:39:21.023Z] [VALIDATE] [TC-001] Validating: Password field is visible
+[2026-09-18T15:39:21.032Z] [PASS    ] [TC-001] G£ˆ Password field is visible
+[2026-09-18T15:39:21.033Z] [VALIDATE] [TC-001] Validating: Sign in button is visible
+[2026-09-18T15:39:21.042Z] [PASS    ] [TC-001] G£ˆ Sign in button is visible
+[2026-09-18T15:39:21.044Z] [ACTION  ] [TC-001] [step 3] Clear existing value in Email / user-id field
+[2026-09-18T15:39:21.073Z] [ACTION  ] [TC-001] [step 4] Enter "maya.chen@pnc.com" into Email / user-id field
+[2026-09-18T15:39:21.099Z] [ACTION  ] [TC-001] [step 5] Clear existing value in Password field
+[2026-09-18T15:39:21.121Z] [ACTION  ] [TC-001] [step 6] Enter ******** into Password field
+[2026-09-18T15:39:21.138Z] [ACTION  ] [TC-001] [step 7] Click Sign in button
+[2026-09-18T15:39:21.224Z] [VALIDATE] [TC-001] Validating: Welcome heading contains "Good morning, Maya"
+[2026-09-18T15:39:21.297Z] [PASS    ] [TC-001] G£ˆ Welcome heading shows "Good morning, Maya"
+[2026-09-18T15:39:21.307Z] [RESULT  ] [TC-001] Welcome text: "Good morning, Maya"
+
+>>> WELCOME TEXT: Good morning, Maya
+
+[2026-09-18T15:39:21.308Z] [ACTION  ] [TC-001] [step 8] Click Sign out button
+[2026-09-18T15:39:21.353Z] [VALIDATE] [TC-001] Validating: Login heading contains "Welcome back"
+[2026-09-18T15:39:21.360Z] [PASS    ] [TC-001] G£ˆ Login heading shows "Welcome back"
+[2026-09-18T15:39:21.658Z] [INFO    ] [TC-001] Recorded 4 coverage hit(s) for the test-gap report
+[2026-09-18T15:39:21.659Z] [PASS    ] [TC-001] G˚· END    TC-001 - login with valid credentials and print welcome text GÂ∆ PASSED in 2861 ms
+  G£Ù  1 [chromium] G«¶ tests\TC-001-login.spec.ts:7:5 G«¶ TC-001 - login with valid credentials and print welcome text (3.2s)
+[2026-09-18T15:39:21.683Z] [TEST    ] [TC-002] G˚¶ START  TC-002 - loans module lists existing loans
+[2026-09-18T15:39:22.010Z] [ACTION  ] [TC-002] [step 1] Navigate to http://localhost:5173/
+[2026-09-18T15:39:22.702Z] [ACTION  ] [TC-002] [step 2] Clear any saved browser session (localStorage) so login is shown
+[2026-09-18T15:39:24.055Z] [INFO    ] [TC-002] Page URL is http://localhost:5173/
+[2026-09-18T15:39:24.055Z] [ACTION  ] [TC-002] [step 3] Clear existing value in Email / user-id field
+[2026-09-18T15:39:24.104Z] [ACTION  ] [TC-002] [step 4] Enter "maya.chen@pnc.com" into Email / user-id field
+[2026-09-18T15:39:24.129Z] [ACTION  ] [TC-002] [step 5] Clear existing value in Password field
+[2026-09-18T15:39:24.149Z] [ACTION  ] [TC-002] [step 6] Enter ******** into Password field
+[2026-09-18T15:39:24.164Z] [ACTION  ] [TC-002] [step 7] Click Sign in button
+[2026-09-18T15:39:24.223Z] [VALIDATE] [TC-002] Validating: Welcome heading contains "Good morning, Maya"
+[2026-09-18T15:39:24.301Z] [PASS    ] [TC-002] G£ˆ Welcome heading shows "Good morning, Maya"
+[2026-09-18T15:39:24.302Z] [ACTION  ] [TC-002] [step 8] Click sidebar item "Loans"
+[2026-09-18T15:39:24.395Z] [VALIDATE] [TC-002] Validating: Breadcrumb contains "Loans"
+[2026-09-18T15:39:24.404Z] [PASS    ] [TC-002] G£ˆ Breadcrumb shows "Loans"
+[2026-09-18T15:39:24.405Z] [VALIDATE] [TC-002] Validating: LOANS page title contains "Loans"
+[2026-09-18T15:39:24.417Z] [PASS    ] [TC-002] G£ˆ LOANS page title shows "Loans"
+[2026-09-18T15:39:24.417Z] [VALIDATE] [TC-002] Validating: LOANS page subtitle contains "Manage your loans and repayment plans"
+[2026-09-18T15:39:24.426Z] [PASS    ] [TC-002] G£ˆ LOANS page subtitle shows "Manage your loans and repayment plans"
+[2026-09-18T15:39:24.427Z] [VALIDATE] [TC-002] Validating: LOANS primary action contains "Apply for a loan"
+[2026-09-18T15:39:24.435Z] [PASS    ] [TC-002] G£ˆ LOANS primary action shows "Apply for a loan"
+[2026-09-18T15:39:24.436Z] [VALIDATE] [TC-002] Validating: LOANS list rows count equals 2
+[2026-09-18T15:39:24.444Z] [PASS    ] [TC-002] G£ˆ LOANS list rows count is 2
+[2026-09-18T15:39:24.444Z] [VALIDATE] [TC-002] Validating: LOANS row "Home Equity Loan" is visible
+[2026-09-18T15:39:24.452Z] [PASS    ] [TC-002] G£ˆ LOANS row "Home Equity Loan" is visible
+[2026-09-18T15:39:24.453Z] [VALIDATE] [TC-002] Validating: LOANS row "Auto Loan" is visible
+[2026-09-18T15:39:24.462Z] [PASS    ] [TC-002] G£ˆ LOANS row "Auto Loan" is visible
+[2026-09-18T15:39:24.470Z] [ACTION  ] [TC-002] [step 9] Click LOANS first row "Home Equity Loan"
+[2026-09-18T15:39:24.530Z] [RESULT  ] [TC-002] Opened loan: "Home Equity Loan"
+[2026-09-18T15:39:24.935Z] [INFO    ] [TC-002] Recorded 4 coverage hit(s) for the test-gap report
+[2026-09-18T15:39:24.936Z] [PASS    ] [TC-002] G˚· END    TC-002 - loans module lists existing loans GÂ∆ PASSED in 2846 ms
+  G£Ù  2 [chromium] G«¶ tests\TC-002-loans.spec.ts:9:5 G«¶ TC-002 - loans module lists existing loans (3.3s)
+[2026-09-18T15:39:24.955Z] [TEST    ] [TC-003] G˚¶ START  TC-003 - user details shows customer profile
+[2026-09-18T15:39:25.285Z] [ACTION  ] [TC-003] [step 1] Navigate to http://localhost:5173/
+[2026-09-18T15:39:25.860Z] [ACTION  ] [TC-003] [step 2] Clear any saved browser session (localStorage) so login is shown
+[2026-09-18T15:39:27.223Z] [INFO    ] [TC-003] Page URL is http://localhost:5173/
+[2026-09-18T15:39:27.223Z] [ACTION  ] [TC-003] [step 3] Clear existing value in Email / user-id field
+[2026-09-18T15:39:27.264Z] [ACTION  ] [TC-003] [step 4] Enter "maya.chen@pnc.com" into Email / user-id field
+[2026-09-18T15:39:27.281Z] [ACTION  ] [TC-003] [step 5] Clear existing value in Password field
+[2026-09-18T15:39:27.303Z] [ACTION  ] [TC-003] [step 6] Enter ******** into Password field
+[2026-09-18T15:39:27.318Z] [ACTION  ] [TC-003] [step 7] Click Sign in button
+[2026-09-18T15:39:27.379Z] [VALIDATE] [TC-003] Validating: Welcome heading contains "Good morning, Maya"
+[2026-09-18T15:39:27.488Z] [PASS    ] [TC-003] G£ˆ Welcome heading shows "Good morning, Maya"
+[2026-09-18T15:39:27.489Z] [ACTION  ] [TC-003] [step 8] Click sidebar item "User details"
+[2026-09-18T15:39:27.578Z] [VALIDATE] [TC-003] Validating: Breadcrumb contains "User details"
+[2026-09-18T15:39:27.587Z] [PASS    ] [TC-003] G£ˆ Breadcrumb shows "User details"
+[2026-09-18T15:39:27.588Z] [VALIDATE] [TC-003] Validating: User Details title contains "User Details"
+[2026-09-18T15:39:27.600Z] [PASS    ] [TC-003] G£ˆ User Details title shows "User Details"
+[2026-09-18T15:39:27.601Z] [VALIDATE] [TC-003] Validating: User Details subtitle contains "Your personal and account information"
+[2026-09-18T15:39:27.609Z] [PASS    ] [TC-003] G£ˆ User Details subtitle shows "Your personal and account information"
+[2026-09-18T15:39:27.610Z] [VALIDATE] [TC-003] Validating: Profile card is visible
+[2026-09-18T15:39:27.619Z] [PASS    ] [TC-003] G£ˆ Profile card is visible
+[2026-09-18T15:39:27.620Z] [VALIDATE] [TC-003] Validating: Profile name contains "Maya Chen"
+[2026-09-18T15:39:27.628Z] [PASS    ] [TC-003] G£ˆ Profile name shows "Maya Chen"
+[2026-09-18T15:39:27.629Z] [VALIDATE] [TC-003] Validating: Profile role contains "Primary account holder"
+[2026-09-18T15:39:27.638Z] [PASS    ] [TC-003] G£ˆ Profile role shows "Primary account holder"
+[2026-09-18T15:39:27.639Z] [VALIDATE] [TC-003] Validating: Profile status contains "Active"
+[2026-09-18T15:39:27.647Z] [PASS    ] [TC-003] G£ˆ Profile status shows "Active"
+[2026-09-18T15:39:27.648Z] [VALIDATE] [TC-003] Validating: Account detail items count equals 6
+[2026-09-18T15:39:27.656Z] [PASS    ] [TC-003] G£ˆ Account detail items count is 6
+[2026-09-18T15:39:27.657Z] [VALIDATE] [TC-003] Validating: Email address detail contains "maya.chen@pnc.com"
+[2026-09-18T15:39:27.665Z] [PASS    ] [TC-003] G£ˆ Email address detail shows "maya.chen@pnc.com"
+[2026-09-18T15:39:27.665Z] [VALIDATE] [TC-003] Validating: Account type detail contains "Premier Checking"
+[2026-09-18T15:39:27.691Z] [PASS    ] [TC-003] G£ˆ Account type detail shows "Premier Checking"
+[2026-09-18T15:39:27.944Z] [INFO    ] [TC-003] Recorded 3 coverage hit(s) for the test-gap report
+[2026-09-18T15:39:27.945Z] [PASS    ] [TC-003] G˚· END    TC-003 - user details shows customer profile GÂ∆ PASSED in 2737 ms
+  G£Ù  3 [chromium] G«¶ tests\TC-003-user-details.spec.ts:5:5 G«¶ TC-003 - user details shows customer profile (3.0s)
+[2026-09-18T15:39:27.965Z] [TEST    ] [TC-004] G˚¶ START  TC-004 - credit cards module lists customer cards
+[2026-09-18T15:39:28.520Z] [SKIP    ] [TC-004] GÒ+ SKIPPED G«ˆ Credit Cards automation not implemented yet G«ˆ pending test data sign-off
+[2026-09-18T15:39:28.521Z] [SKIP    ] [TC-004] G˚· END    TC-004 - credit cards module lists customer cards GÂ∆ SKIPPED in 325 ms
+  -  4 [chromium] G«¶ tests\TC-004-credit-cards.spec.ts:5:5 G«¶ TC-004 - credit cards module lists customer cards
+[35m[2026-09-18T15:39:29.008Z] [RUN     ] Plugin session ENDED after execution: S-4EF6DC01[0m
+[35m[2026-09-18T15:39:29.009Z] [RUN     ] RUN END[0m
+[35m[2026-09-18T15:39:29.010Z] [RUN     ] GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…[0m
+
+  1 skipped
+  3 passed (11.7s)
+GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ… FINAL EXECUTION SUMMARY GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…
+Tests: 4  Passed: 3  Failed: 0  Skipped: 1  Flaky: 0  Pass %: 75%
+Coverage: 41%  Test gap: 59%  (12/29 inventory nodes)
+Untouched GÂ∆ modules: 4, sub-modules: 5, functionality: 8
+   G£˚ Dashboard G«¶ Banking services grid G«¶ View banking services
+   G£˚ Loans G«¶ Loan applications G«¶ Apply for a loan
+   G£˚ Credit Cards G«¶ Credit card list G«¶ Open credit cards
+   G£˚ Credit Cards G«¶ Credit card list G«¶ View card details
+   G£˚ Statements G«¶ Monthly statements G«¶ Open statements
+   G£˚ Statements G«¶ Monthly statements G«¶ View statement details
+   G£˚ Activity History G«¶ Transaction activity G«¶ View activity history
+   G£˚ Preferences G«¶ Banking preferences G«¶ View preferences
+Report: C:\Users\GCCHackVM.ILB-3790VM-63\Documents\playwright-tests\reports\final-execution-report.html
+GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…GÚ…
+
+To open last HTML report run:
+[36m[39m
+[36m  npx playwright show-report[39m
+[36m[39m
+

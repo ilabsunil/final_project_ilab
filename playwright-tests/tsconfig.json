@@ -3,12 +3,11 @@
     "target": "ES2022",
     "module": "Node16",
     "moduleResolution": "Node16",
-    "esModuleInterop": true,
     "strict": true,
-    "types": ["node", "@playwright/test"],
+    "esModuleInterop": true,
     "resolveJsonModule": true,
     "skipLibCheck": true,
-    "noEmit": true
+    "types": ["node", "@playwright/test"]
   },
-  "include": ["playwright.config.ts", "framework/**/*.ts", "tests/**/*.ts"]
+  "include": ["framework/**/*.ts", "tests/**/*.ts", "playwright.config.ts"]
 }

@@ -1,0 +1,78 @@
+{
+  "_comment": "Test data & dependencies — PNC Bank app. One UNIQUE key per value. Scripts never hard-code data; change it here. Numbers may be written as JSON numbers or strings.",
+
+  "APP_BASE_URL": "http://localhost:5173/",
+  "APP_API_HEALTH_URL": "http://localhost:5050/api/health",
+  "HEADLESS": false,
+  "RETRY_COUNT": 2,
+  "TEST_TIMEOUT_MS": 60000,
+  "DEFAULT_TIMEOUT_MS": 15000,
+  "NAVIGATION_TIMEOUT_MS": 30000,
+  "PAGE_LOAD_WAIT_MS": 1000,
+
+  "COVERAGE_ENABLED": true,
+  "COVERAGE_API_BASE_URL": "http://127.0.0.1:5070/api",
+  "COVERAGE_INVENTORY_PATH": "../CoverageEngine/01-module-inventory/module_inventory.json",
+  "COVERAGE_SESSION_NAME": "PNC Playwright automation run",
+
+  "LOGIN_VALID_EMAIL": "maya.chen@pnc.com",
+  "LOGIN_VALID_PASSWORD": "demo123",
+  "LOGIN_VALID_FIRST_NAME": "Maya",
+  "LOGIN_VALID_FULL_NAME": "Maya Chen",
+
+  "LOGIN_INVALID_EMAIL": "wrong.user@pnc.com",
+  "LOGIN_INVALID_PASSWORD": "badpassword",
+  "LOGIN_ERROR_TEXT": "That email and password combination is not recognized.",
+
+  "LOGIN_HEADING_TEXT": "Welcome back",
+  "WELCOME_HEADING_PREFIX": "Good morning,",
+
+  "DASH_SERVICES_HEADING_TEXT": "What would you like to explore?",
+  "DASH_EXPECTED_SERVICE_COUNT": 4,
+
+  "USERS_PAGE_TITLE": "User Details",
+  "USERS_PAGE_SUBTITLE": "Your personal and account information",
+  "USERS_BREADCRUMB": "User details",
+  "USERS_PROFILE_ROLE": "Primary account holder",
+  "USERS_PROFILE_STATUS": "Active",
+  "USERS_DETAIL_LABEL_EMAIL": "Email address",
+  "USERS_DETAIL_LABEL_ACCOUNT_TYPE": "Account type",
+  "USERS_EXPECTED_ACCOUNT_TYPE": "Premier Checking",
+  "USERS_EXPECTED_DETAIL_COUNT": 6,
+
+  "LOANS_PAGE_TITLE": "Loans",
+  "LOANS_PAGE_SUBTITLE": "Manage your loans and repayment plans",
+  "LOANS_BREADCRUMB": "Loans",
+  "LOANS_ACTION_LABEL": "Apply for a loan",
+  "LOANS_EXPECTED_ROW_COUNT": 2,
+  "LOANS_EXPECTED_ROW_1": "Home Equity Loan",
+  "LOANS_EXPECTED_ROW_2": "Auto Loan",
+
+  "CARDS_PAGE_TITLE": "Credit Cards",
+  "CARDS_PAGE_SUBTITLE": "View cards, balances, and payment activity",
+  "CARDS_BREADCRUMB": "Credit cards",
+  "CARDS_ACTION_LABEL": "Manage cards",
+  "CARDS_EXPECTED_ROW_COUNT": 2,
+  "CARDS_EXPECTED_ROW_1": "PNC Cash Rewards Visa",
+  "CARDS_EXPECTED_ROW_2": "PNC Points Visa",
+
+  "STATEMENTS_PAGE_TITLE": "Statements",
+  "STATEMENTS_PAGE_SUBTITLE": "Review account statements and transactions",
+  "STATEMENTS_BREADCRUMB": "Statements",
+  "STATEMENTS_ACTION_LABEL": "Download statements",
+  "STATEMENTS_EXPECTED_ROW_COUNT": 3,
+  "STATEMENTS_EXPECTED_ROW_1": "September 2026 statement",
+
+  "ACTIVITY_PAGE_TITLE": "Activity History",
+  "ACTIVITY_PAGE_SUBTITLE": "Review recent transactions and account activity",
+  "ACTIVITY_BREADCRUMB": "Activity history",
+  "ACTIVITY_ACTION_LABEL": "Download activity",
+  "ACTIVITY_MIN_ROW_COUNT": 1,
+
+  "PREFERENCES_PAGE_TITLE": "Preferences",
+  "PREFERENCES_PAGE_SUBTITLE": "Manage your banking preferences",
+  "PREFERENCES_BREADCRUMB": "Preferences",
+  "PREFERENCES_ACTION_LABEL": "Edit preferences",
+  "PREFERENCES_EXPECTED_ROW_COUNT": 3,
+  "PREFERENCES_EXPECTED_ROW_1": "Email notifications"
+}

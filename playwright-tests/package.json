@@ -1,23 +1,19 @@
 {
-  "name": "playwright-tests",
+  "name": "pnc-playwright-tests",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Data-driven Playwright POM framework for the PNC Bank local app with CoverageEngine test-gap reporting",
+  "private": true,
+  "type": "commonjs",
   "scripts": {
     "test": "playwright test",
     "test:headed": "playwright test --headed",
     "test:ui": "playwright test --ui",
-    "test:ci": "cross-env CI=true playwright test --reporter=list,html",
-    "report": "playwright show-report"
+    "report": "playwright show-report",
+    "report:final": "start reports/final-execution-report.html"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
   "devDependencies": {
-    "@playwright/test": "^1.63.0",
-    "@types/node": "^22.20.3",
-    "cross-env": "^10.1.0",
-    "typescript": "^7.0.2"
+    "@playwright/test": "^1.48.0",
+    "@types/node": "^22.7.0",
+    "typescript": "^5.6.0"
   }
 }

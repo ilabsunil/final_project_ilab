@@ -2,10 +2,10 @@ import pptxgen from 'pptxgenjs';
 
 const pptx = new pptxgen();
 pptx.layout = 'LAYOUT_WIDE';
-pptx.author = 'Northstar Bank Quality Engineering';
+pptx.author = 'PNC Bank Quality Engineering';
 pptx.subject = 'Hackathon solution proposal';
-pptx.title = 'Northstar Bank Quality Platform';
-pptx.company = 'Northstar Bank';
+pptx.title = 'PNC Bank Quality Platform';
+pptx.company = 'PNC Bank';
 pptx.lang = 'en-US';
 pptx.theme = { headFontFace: 'Aptos Display', bodyFontFace: 'Aptos', lang: 'en-US' };
 pptx.defineSlideMaster({
@@ -13,7 +13,7 @@ pptx.defineSlideMaster({
   background: { color: 'F5F7F5' },
   objects: [
     { rect: { x: 0, y: 0, w: 13.333, h: 0.12, fill: { color: 'BCE76B' }, line: { color: 'BCE76B' } } },
-    { text: { text: 'NORTHSTAR BANK  /  QUALITY ENGINEERING', options: { x: 0.55, y: 7.1, w: 5.6, h: 0.18, fontFace: 'Aptos', fontSize: 7, color: '718080', charSpacing: 1.2, margin: 0 } } },
+    { text: { text: 'PNC BANK  /  QUALITY ENGINEERING', options: { x: 0.55, y: 7.1, w: 5.6, h: 0.18, fontFace: 'Aptos', fontSize: 7, color: '718080', charSpacing: 1.2, margin: 0 } } },
     { text: { text: '2026', options: { x: 12.25, y: 7.1, w: 0.55, h: 0.18, fontFace: 'Aptos', fontSize: 7, color: '718080', align: 'right', margin: 0 } } }
   ],
   slideNumber: { x: 12.86, y: 7.1, color: '718080', fontFace: 'Aptos', fontSize: 7 }
@@ -31,7 +31,7 @@ s.background = { color: C.teal };
 s.addShape(pptx.ShapeType.arc, { x: 8.8, y: 0.8, w: 5.2, h: 5.2, line: { color: '376159', width: 1.4, transparency: 15 }, adjustPoint: 0.25 });
 s.addShape(pptx.ShapeType.arc, { x: 9.5, y: 1.5, w: 4, h: 4, line: { color: '376159', width: 1.4, transparency: 15 }, adjustPoint: 0.25 });
 s.addShape(pptx.ShapeType.roundRect, { x: 0.8, y: 0.8, w: 0.58, h: 0.58, rectRadius: 0.08, fill: { color: C.lime }, line: { color: C.lime } }); s.addText('N', { x: 0.8, y: 0.91, w: 0.58, h: 0.3, align: 'center', fontSize: 22, bold: true, color: C.teal, margin: 0 });
-s.addText('NORTHSTAR BANK', { x: 0.8, y: 1.85, w: 4, h: 0.2, fontSize: 10, bold: true, color: C.lime, charSpacing: 1.8, margin: 0 }); s.addText('Confidence,\nmeasured.', { x: 0.8, y: 2.25, w: 7, h: 1.45, fontFace: 'Aptos Display', fontSize: 40, bold: true, color: C.white, margin: 0, breakLine: false }); s.addText('Optimize Repetitive Tasks and Improve Productivity', { x: 0.85, y: 4.1, w: 6.3, h: 0.35, fontSize: 17, color: 'C7DDD2', margin: 0 }); s.addText('Automation resiliency  +  coverage intelligence  +  productivity analytics', { x: 0.85, y: 5.15, w: 7.5, h: 0.25, fontSize: 11, color: C.lime, margin: 0 });
+s.addText('PNC BANK', { x: 0.8, y: 1.85, w: 4, h: 0.2, fontSize: 10, bold: true, color: C.lime, charSpacing: 1.8, margin: 0 }); s.addText('Confidence,\nmeasured.', { x: 0.8, y: 2.25, w: 7, h: 1.45, fontFace: 'Aptos Display', fontSize: 40, bold: true, color: C.white, margin: 0, breakLine: false }); s.addText('Optimize Repetitive Tasks and Improve Productivity', { x: 0.85, y: 4.1, w: 6.3, h: 0.35, fontSize: 17, color: 'C7DDD2', margin: 0 }); s.addText('Automation resiliency  +  coverage intelligence  +  productivity analytics', { x: 0.85, y: 5.15, w: 7.5, h: 0.25, fontSize: 11, color: C.lime, margin: 0 });
 
 s = pptx.addSlide('MASTER'); title(s, '01 / Context', 'The problem is bigger than pass or fail', 'Regression teams need a measurable view of what was actually tested.'); bullets(s, ['Manual journeys can miss modules and scenarios.', 'Hardcoded data and locators increase maintenance effort.', 'Interrupted sessions lose the last known execution state.', 'A passing test can still hide a meaningful coverage gap.']); card(s, 8.15, 2.25, 4.25, 2.7, 'The question we answer', 'Which functionality was exercised, what was missed, and what risk remains?', C.amber); pill(s, 'PASS / FAIL IS NOT ENOUGH', 8.45, 4.25, 3.65, 'FFF3DF', 'B66F17');
 
@@ -55,4 +55,4 @@ s = pptx.addSlide('MASTER'); title(s, '10 / Roadmap', 'From demonstrator to auto
 
 s = pptx.addSlide('MASTER'); title(s, '11 / Close', 'Automation resiliency. Coverage intelligence. Productivity analytics.', 'A unified quality engineering platform for more reliable banking releases.'); flow(s, ['Build', 'Capture', 'Correlate', 'Understand', 'Improve'], 2.75); s.addText('Thank you', { x: 0.8, y: 5.15, w: 11.8, h: 0.45, align: 'center', fontSize: 25, bold: true, color: C.teal, margin: 0 });
 
-await pptx.writeFile({ fileName: '../docs/Northstar-Bank-Quality-Platform-Demo.pptx' });
+await pptx.writeFile({ fileName: '../docs/PNC-Bank-Quality-Platform-Demo.pptx' });

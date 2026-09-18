@@ -1,5 +1,5 @@
 {
-  "applicationName": "Northstar Banking Application",
+  "applicationName": "PNC Banking Application",
   "baseUrl": "http://localhost:5173",
   "defaultTimeoutMs": 5000,
   "captureManualActions": true,

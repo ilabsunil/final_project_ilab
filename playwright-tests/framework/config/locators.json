@@ -1,7 +1,0 @@
-{
-  "usernameInput": "xpath=//input[@type='email' and @name='email']",
-  "passwordInput": "xpath=//input[@type='password' and @name='password']",
-  "signInButton": "xpath=//button[@type='submit' and normalize-space()='Sign in']",
-  "signOutButton": "xpath=//button[normalize-space()='Sign out']",
-  "welcomeHeading": "xpath=//h1[contains(normalize-space(), 'Good morning,')]"
-}
