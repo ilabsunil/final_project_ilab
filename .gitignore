@@ -5,6 +5,10 @@
 **/test-results/
 **/.session/
 
+# Generated Playwright run reports (regenerated on every test run)
+playwright-tests/reports/
+run*.txt
+
 # .NET build output
 **/bin/
 **/obj/
