@@ -6,44 +6,44 @@
     "skipped": 1,
     "flaky": 0,
     "passPercent": 75,
-    "durationMs": 46849,
-    "startedAt": "9/18/2026, 5:44:39 PM",
-    "finishedAt": "9/18/2026, 5:45:26 PM"
+    "durationMs": 45368,
+    "startedAt": "9/19/2026, 5:33:50 AM",
+    "finishedAt": "9/19/2026, 5:34:35 AM"
   },
   "tests": [
     {
       "testCaseId": "TC-001",
       "title": "TC-001 - authentication accepts valid and rejects invalid credentials",
       "status": "passed",
-      "durationMs": 4192,
+      "durationMs": 1556,
       "retries": 0
     },
     {
       "testCaseId": "TC-002",
       "title": "TC-002 - dashboard exposes every banking service and quick link",
       "status": "passed",
-      "durationMs": 978,
+      "durationMs": 1070,
       "retries": 0
     },
     {
       "testCaseId": "TC-003",
       "title": "TC-003 - user details validates profile and all account fields",
       "status": "passed",
-      "durationMs": 1040,
+      "durationMs": 1298,
       "retries": 0
     },
     {
       "testCaseId": "TC-004",
       "title": "TC-004 - loans validates applications, repayments, and apply action",
       "status": "passed",
-      "durationMs": 1237,
+      "durationMs": 1172,
       "retries": 0
     },
     {
       "testCaseId": "TC-005",
       "title": "TC-005 - credit cards validates both cards and management action",
       "status": "failed",
-      "durationMs": 34120,
+      "durationMs": 34027,
       "retries": 1,
       "error": "Error: Row \"Card that does not exist\"\n\n\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('//article[contains(@class,\\'service-row\\')][.//h2[normalize-space()=\\'Card that does not exist\\']]').first()\nExpected: visible\nTimeout: 15000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Row \"Card that does not exist\" locator('//article[contains(@class,\\'service-row\\')][.//h2[normalize-space()=\\'Card that does not exist\\']]').first() with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for locator('//article[contains(@class,\\'service-row\\')][.//h2[normalize-space()=\\'Card that does not exist\\']]').first()\u001b[22m\n"
     },
@@ -51,21 +51,21 @@
       "testCaseId": "TC-006",
       "title": "TC-006 - statements validates monthly documents and download action",
       "status": "passed",
-      "durationMs": 1253,
+      "durationMs": 1341,
       "retries": 0
     },
     {
       "testCaseId": "TC-007",
       "title": "TC-007 - activity history validates transactions and download action",
       "status": "passed",
-      "durationMs": 1000,
+      "durationMs": 1150,
       "retries": 0
     },
     {
       "testCaseId": "TC-008",
       "title": "TC-008 - preferences validates every setting and edit action",
       "status": "skipped",
-      "durationMs": 274,
+      "durationMs": 281,
       "retries": 0,
       "skipReason": "Intentionally skipped for reporting validation"
     }

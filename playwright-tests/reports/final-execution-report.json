@@ -6,37 +6,37 @@
     "skipped": 1,
     "flaky": 0,
     "passPercent": 75,
-    "durationMs": 14105,
-    "startedAt": "9/18/2026, 5:17:19 PM",
-    "finishedAt": "9/18/2026, 5:17:33 PM"
+    "durationMs": 13635,
+    "startedAt": "9/19/2026, 5:39:42 AM",
+    "finishedAt": "9/19/2026, 5:39:56 AM"
   },
   "tests": [
     {
       "testCaseId": "TC-001",
       "title": "TC-001 - login with valid credentials and print welcome text",
       "status": "passed",
-      "durationMs": 3804,
+      "durationMs": 3747,
       "retries": 0
     },
     {
       "testCaseId": "TC-002",
       "title": "TC-002 - loans module lists existing loans",
       "status": "passed",
-      "durationMs": 3646,
+      "durationMs": 3540,
       "retries": 0
     },
     {
       "testCaseId": "TC-003",
       "title": "TC-003 - user details shows customer profile",
       "status": "passed",
-      "durationMs": 3249,
+      "durationMs": 3153,
       "retries": 0
     },
     {
       "testCaseId": "TC-004",
       "title": "TC-004 - credit cards module lists customer cards",
       "status": "skipped",
-      "durationMs": 661,
+      "durationMs": 763,
       "retries": 0,
       "skipReason": "Credit Cards automation not implemented yet — pending test data sign-off"
     }

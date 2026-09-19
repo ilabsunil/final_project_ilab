@@ -36,17 +36,14 @@ const statusPill = (s: TestRow['status']): string => {
 };
 
 export function renderReport(exec: ExecutionSummary, tests: TestRow[], gap: GapReport): string {
+  const totalRetries = tests.reduce((total, test) => total + test.retries, 0);
   return `<!doctype html><html lang="en"><head><meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
 <title>PNC Bank — Test Execution &amp; Test Gap Report</title><style>${REPORT_CSS}</style></head>
 <body><div class="wrap">
 ${renderHero(exec, gap)}
 ${renderKpis(exec, gap)}
-${renderDonuts(exec, gap)}
-<h2 class="sec">Test case results <span class="rule"></span></h2>
-<div class="card panel" style="padding:6px 6px 4px"><table>
-<thead><tr><th>Test case</th><th>Status</th><th>Duration</th><th>Retries</th><th>Details</th></tr></thead>
-<tbody>${tests.map(renderTestRow).join('')}</tbody></table></div>
+${renderDonuts(exec, gap, totalRetries)}
 ${renderGapSection(gap)}
 <div class="note"><strong>How the numbers are calculated.</strong>
 Pass % = passed ÷ total test cases. Coverage % = (modules + sub-modules + functionality touched by <em>any</em> test) ÷ all
@@ -82,7 +79,7 @@ ${k('r', 'Test gap', `${gap.gapPercent}%`, `${gap.totals.nodes - gap.covered.nod
 </section>`;
 }
 
-function renderDonuts(exec: ExecutionSummary, gap: GapReport): string {
+function renderDonuts(exec: ExecutionSummary, gap: GapReport, totalRetries: number): string {
   const donut = (v: number, c: string, label: string) =>
     `<div class="donut" style="--v:${v};--c:${c}"><i><span></span><b>${v}%</b><span>${label}</span></i></div>`;
   return `<section class="grid two">
@@ -92,7 +89,9 @@ function renderDonuts(exec: ExecutionSummary, gap: GapReport): string {
 <div class="row"><i style="background:var(--green)"></i>Passed<b>${exec.passed}</b></div>
 <div class="row"><i style="background:var(--red)"></i>Failed<b>${exec.failed}</b></div>
 <div class="row"><i style="background:var(--amber)"></i>Skipped<b>${exec.skipped}</b></div>
-<div class="row"><i style="background:var(--blue)"></i>Flaky<b>${exec.flaky}</b></div></div></div></div>
+<div class="row"><i style="background:var(--blue)"></i>Flaky<b>${exec.flaky}</b></div>
+<div class="row">Duration<b>${ms(exec.durationMs)}</b></div>
+<div class="row">Total retries<b>${totalRetries}</b></div></div></div></div>
 <div class="card panel"><h2>Coverage vs. test gap</h2><p class="hint">Overall, against the full CoverageEngine inventory.</p>
 <div class="donuts">${donut(gap.coveragePercent, 'var(--blue)', 'covered')}
 <div class="legend">
